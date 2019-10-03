@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Trandrew</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="home.css">
+  <link rel="shortcut icon" href="./Images/Alpaca.JPG" />
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+</head>
+
+<body>
+  <nav class="navbar navbar-light bg-light">
+    <a class="navbar-brand" href="#">
+      <img src="./Images/Alpaca.JPG" width="30" height="30" class="d-inline-block align-top" alt="">
+      Andrew Tran
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+      <div class="navbar-nav float-right">
+        <a class="nav-item nav-link" href="#about">About Me</a>
+        <a class="nav-item nav-link" href="#projects">Projects</a>
+        <a class="nav-item nav-link" href="https://www.youtube.com/trandrew1023">YouTube</a>
+      </div>
+    </div>
+  </nav>
+
+  <div class="parallax"></div>
+
+  <div class="container-fluid" id="main">
+    <div class="row" id="intro">
+      <div class="col-lg">
+        <h1 id="name">Hi!</h1>
+        <h1>My name is Andrew Tran.</h1>
+        <h2 id="short-intro">I study Software Engineering at </h2>
+        <h2 id="ISU">Iowa State University</h2>
+        <h4 id="short-desc">I love sharing positive experiences through creative arts and programming.</h4>
+      </div>
+    </div>
+
+    <div class="row border-top" id="about">
+      <div class="col-lg">
+        <h2>About Me</h2>
+        <a href="./Images/AndrewTranResume.pdf"><h2>My Resume</h2></a><br><br>
+        <!-- embedded resume view <object data="./Images/AndrewTranResume.pdf" type="application/pdf" width="100%" height="800px"></object>-->
+      </div>
+    </div>
+
+    <div class="row border-top" id="projects">
+      <div class="col-lg">
+        <div class="container-fluid" id="coding">
+          <h2>Some Of My Work</h2>
+          <div class="row work-container" id="secret">
+            <div class="col-md-2"><img class="rotate90" src="./Images/SECRET.jpg"></div>
+            <div class="col-md-10">
+              <a href="https://devpost.com/software/secret-prv9bq"><h2>SECRET - Steganography/Encryption for Circumventing REalized Tyranny</h2></a>
+              <p>
+                This is a hackathon project (HackISU X) - Most Ethical Hack/First Place - Hardware<br>
+                Journalists, rebels, and innocent civilians throughout the world live under the oppressive rule of dictators and tyrants who desire to silence truth and punish those who refuse to conform. Our device, the SECRET, is a zero-knowledge
+                platform for hiding a single message across multiple flash drives in a manner that requires all devices to be brought back together to reconstruct and decrypt the message. By combining stenography with encryption powered by our
+                powerful, non-deterministic random number generator, the message can be safely hidden in a manner that provides plausible deniability for the carriers of the drives.
+              </p>
+            </div>
+          </div>
+          <div class="row work-container" id="plusplus">
+            <div class="col-md-2"><img src="./Images/281++.gif"></div>
+            <div class="col-md-10">
+              <a href="https://github.com/trandrew1023/281PlusPlus"><h2>281++ - A Digital Logic Simulator</h2></a>
+              <p>- Voted as Top Project by the professor, TAs, and peers.<br>
+                - Web application created as a class project using JavaScript, HTML, and CSS.<br>
+                - UI for users to design and simulate digital logic schematics.<br>
+                - Ability to create accounts to save projects and edit.<br>
+                - In the future, we want to complete a new use case where an instructor/mentor can post assignments for
+                students to complete and submit.</p>
+            </div>
+          </div>
+          <div class="row work-container" id="dc">
+            <div class="col-md-2"><img src="./Images/DC.png"></div>
+            <div class="col-md-10">
+              <a href="https://github.com/trandrew1023/DrinkersChoice"><h2>Drinker's Choice - Android Application</h2></a>
+              <p>Android application for a Reddit like app for drinks.
+                - Users can create posts consisting of their favorite bubble teas, mixers, and other favorite drinks.<br>
+                - Interaction through comments and like/dislikes are available.<br>
+                - Users over 21 can request a ride within the app using an API to select location.<br>
+                - Chatting is available through the use of websockets.<br>
+
+                I developed the APIs for the application using Spring.<br>
+                The database was managed using MySQL Workbench</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <footer>
+      <p>
+        Phone: 515-657-0589 <br>
+        Email: atran@iastate.edu
+      </p>
+    </footer>
+</body>
+
+</html>
