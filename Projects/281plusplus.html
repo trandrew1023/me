@@ -17,6 +17,8 @@
     <link rel="stylesheet" href="../assets/css/Header-Dark.css">
     <link rel="stylesheet" href="../assets/css/Highlight-Clean.css">
     <link rel="stylesheet" href="../assets/css/Highlight-Phone.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.1.1/aos.css">
     <link rel="stylesheet" href="../assets/css/Projects-Clean.css">
     <link rel="stylesheet" href="../assets/css/Projects-Horizontal.css">
     <link rel="stylesheet" href="../assets/css/styles.css">
@@ -32,7 +34,7 @@
                             <li class="nav-item" role="presentation"><a class="nav-link" href="../index.html">Home</a></li>
                             <li class="nav-item" role="presentation"><a class="nav-link" href="../about.html">About</a></li>
                             <li class="nav-item" role="presentation"><a class="nav-link" href="../resume.html">Resume</a></li>
-                            <li class="nav-item" role="presentation"><a class="nav-link" href="#">Projects</a></li>
+                            <li class="nav-item" role="presentation"><a class="nav-link" href="../projects.html">Projects</a></li>
                             <li class="nav-item" role="presentation"><a class="nav-link" href="../portfolio.html">Porfolio</a></li>
                             <li class="nav-item" role="presentation"><a class="nav-link" href="../blog.html">Blog</a></li>
                         </ul>
@@ -48,14 +50,22 @@
     <div class="highlight-phone">
         <div class="container">
             <div class="row">
-                <div class="col-md-8">
+                <div class="col-md-8" data-aos="fade-right">
                     <div class="intro">
                         <h2>281++</h2>
-                        <p>Nunc luctus in metus eget fringilla. Aliquam sed justo ligula. Vestibulum nibh erat, pellentesque ut laoreet vitae. Aliqua sed justo ligula.</p><a class="btn btn-primary" role="button" href="https://github.com/trandrew1023/281-plus-plus"><i class="fa fa-github"></i>&nbsp;Github</a></div>
-                </div>
-                <div class="col-sm-4"><img src="../assets/img/dflipflop.gif"></div>
-            </div>
+                        <p style="margin-bottom: 5px;">A class project created with Michael Lauderback and Justin Worley. Also voted as top project by the class!<br><br>CprE 281 is Iowa State's Digital Logic class. We use Quartus Prime to design for our FPGA and it could be challenging
+                            at times to debug and use. We wanted to make a Notepad++ equivalent to prototype, save, and simulate digital logic schematics.&nbsp;<br><br>Tech stack:</p>
+                        <ul style="color: rgb(125,130,133);">
+                            <li>Firebase</li>
+                            <li>Bootstrap</li>
+                            <li>JQuery</li>
+                            <li>p5.js</li>
+                        </ul>
+                        <p style="margin-bottom: 5px;"></p><a class="btn btn-primary" role="button" href="https://github.com/trandrew1023/281-plus-plus"><i class="fa fa-github"></i>&nbsp;Github</a></div><a class="btn btn-primary" role="button" href="../projects.html" style="margin-top: 19px;"><i class="icon ion-arrow-left-c"></i>&nbsp;Back</a></div>
+                <div
+                    class="col-sm-4"><img data-aos="fade-down" src="../assets/img/dflipflop.gif"></div>
         </div>
+    </div>
     </div>
     <div class="footer-basic">
         <footer>
@@ -76,6 +86,8 @@
     <div class="projects-clean"></div>
     <script src="../assets/js/jquery.min.js"></script>
     <script src="../assets/bootstrap/js/bootstrap.min.js"></script>
+    <script src="../assets/js/bs-init.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.1.1/aos.js"></script>
 </body>
 
 </html>
