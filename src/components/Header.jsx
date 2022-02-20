@@ -21,11 +21,11 @@ export default function Header() {
   });
 
   const paths = [
-    '/',
-    '/resume',
-    '/projects',
-    '/portfolio',
-    '/blog',
+    '/me',
+    '/me/resume',
+    '/me/projects',
+    '/me/portfolio',
+    '/me/blog',
   ];
 
   return (
@@ -44,29 +44,29 @@ export default function Header() {
           }}
         >
           <Tab
-            value="/"
+            value={'/' || '/me'}
             label={<span style={{ color: 'black' }}>Home</span>}
-            onClick={() => navigate('/')}
+            onClick={() => navigate('/me')}
           />
           <Tab
-            value="/resume"
+            value="/me/resume"
             label={<span style={{ color: 'black' }}>Resume</span>}
-            onClick={() => navigate('/resume')}
+            onClick={() => navigate('/me/resume')}
           />
           <Tab
-            value="/projects"
+            value="/me/projects"
             label={<span style={{ color: 'black' }}>Projects</span>}
-            onClick={() => navigate('/projects')}
+            onClick={() => navigate('/me/projects')}
           />
           <Tab
-            value="/portfolio"
+            value="/me/portfolio"
             label={<span style={{ color: 'black' }}>Portfolio</span>}
-            onClick={() => navigate('/portfolio')}
+            onClick={() => navigate('/me/portfolio')}
           />
           <Tab
-            value="/blog"
+            value="/me/blog"
             label={<span style={{ color: 'black' }}>Blog</span>}
-            onClick={() => navigate('/blog')}
+            onClick={() => navigate('/me/blog')}
           />
         </Tabs>
       </AppBar>

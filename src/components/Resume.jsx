@@ -23,7 +23,6 @@ import 'aos/dist/aos.css';
 import imageChicken from '../static/images/chick.png';
 
 export default function Resume() {
-  AOS.init();
   const [time, setTime] = useState(new Date());
   const renderList = (items) => (
     <ul>
@@ -272,10 +271,17 @@ export default function Resume() {
     </Grid>
   );
 
+  // const temp = (index) => (
+  //   index % 2 === 0 ? 'fade-left' : 'fade-right'
+  // );
+
   const getTimeLineItem = (timelineItemDetails, index) => (
-    <TimelineItem data-aos={index % 2 === 0 ? 'fade-left' : 'fade-right'}>
+    <TimelineItem
+      data-aos={index % 2 === 0 ? 'fade-left' : 'fade-right'}
+    >
       <TimelineOppositeContent color="text.secondary">
         {timelineItemDetails.date}
+        {index}
       </TimelineOppositeContent>
       <TimelineSeparator>
         <TimelineDot />
@@ -297,6 +303,7 @@ export default function Resume() {
   useEffect(() => {
     document.title = 'Resume - Trandrew';
     window.scrollTo(0, 0);
+    AOS.init();
     const timer = setInterval(() => {
       setTime(new Date());
     }, 1000);
@@ -330,7 +337,10 @@ export default function Resume() {
         </Typography>
       </Grow>
       {resumeBody()}
-      <Timeline position="alternate">
+      <Timeline
+        position="alternate"
+        sx={{ overflowX: 'hidden', overflowY: 'hidden' }}
+      >
         {timelineDetails.map((timelineDetail, index) => (
           <Fragment key={timelineDetail.date}>
             {getTimeLineItem(timelineDetail, index)}
