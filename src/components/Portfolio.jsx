@@ -76,6 +76,7 @@ export default function Portfolio() {
               xs={12}
               sm={6}
               md={4}
+              sx={{ mb: 3 }}
             >
               <PortfolioCard portfolioCardDetails={portfolioCard} />
             </Grid>
