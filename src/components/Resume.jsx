@@ -271,10 +271,6 @@ export default function Resume() {
     </Grid>
   );
 
-  // const temp = (index) => (
-  //   index % 2 === 0 ? 'fade-left' : 'fade-right'
-  // );
-
   const getTimeLineItem = (timelineItemDetails, index) => (
     <TimelineItem
       data-aos={index % 2 === 0 ? 'fade-left' : 'fade-right'}
