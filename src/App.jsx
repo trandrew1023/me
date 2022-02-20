@@ -15,11 +15,11 @@ function App() {
       <>
         {window.innerWidth >= 540 && <Header />}
         <Routes>
-          <Route path="/me" element={<Home />} />
-          <Route path="/me/resume" element={<Resume />} />
-          <Route path="/me/projects" element={<Projects />} />
-          <Route path="/me/portfolio" element={<Portfolio />} />
-          <Route path="/me/blog" element={<Blog />} />
+          <Route path="/" element={<Home />} />
+          <Route path="/resume" element={<Resume />} />
+          <Route path="/projects" element={<Projects />} />
+          <Route path="/portfolio" element={<Portfolio />} />
+          <Route path="/blog" element={<Blog />} />
           <Route path="*" element={<Home />} />
         </Routes>
         {window.innerWidth < 540 ? <MobileNavbar /> : <Footer />}

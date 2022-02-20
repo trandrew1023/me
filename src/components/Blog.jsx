@@ -7,16 +7,19 @@ import {
 }
   from '@mui/material';
 import PrecisionManufacturingIcon from '@mui/icons-material/PrecisionManufacturing';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 import imageChicken from '../static/images/chick.png';
 
 export default function Blog() {
   useEffect(() => {
     document.title = 'Blog - Trandrew';
     window.scrollTo(0, 0);
+    AOS.init();
   });
 
   return (
-    <Box>
+    <Box data-aos="fade-down">
       <Grid
         container
         display="flex"

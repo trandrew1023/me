@@ -21,11 +21,10 @@ export default function Header() {
   });
 
   const paths = [
-    '/me',
-    '/me/resume',
-    '/me/projects',
-    '/me/portfolio',
-    '/me/blog',
+    '#/resume',
+    '#/projects',
+    '#/portfolio',
+    '#/blog',
   ];
 
   return (
@@ -35,7 +34,7 @@ export default function Header() {
         sx={{ alignItems: 'center' }}
       >
         <Tabs
-          value={paths.indexOf(window.location.pathname) === -1 ? '/' : window.location.pathname}
+          value={paths.indexOf(window.location.hash) === -1 ? '/' : window.location.hash}
           indicatorColor="primary"
           TabIndicatorProps={{
             sx: {
@@ -44,29 +43,29 @@ export default function Header() {
           }}
         >
           <Tab
-            value={'/' || '/me'}
+            value={'/' || '#/'}
             label={<span style={{ color: 'black' }}>Home</span>}
-            onClick={() => navigate('/me')}
+            onClick={() => navigate('/')}
           />
           <Tab
-            value="/me/resume"
+            value="#/resume"
             label={<span style={{ color: 'black' }}>Resume</span>}
-            onClick={() => navigate('/me/resume')}
+            onClick={() => navigate('/resume')}
           />
           <Tab
-            value="/me/projects"
+            value="#/projects"
             label={<span style={{ color: 'black' }}>Projects</span>}
-            onClick={() => navigate('/me/projects')}
+            onClick={() => navigate('/projects')}
           />
           <Tab
-            value="/me/portfolio"
+            value="#/portfolio"
             label={<span style={{ color: 'black' }}>Portfolio</span>}
-            onClick={() => navigate('/me/portfolio')}
+            onClick={() => navigate('/portfolio')}
           />
           <Tab
-            value="/me/blog"
+            value="#/blog"
             label={<span style={{ color: 'black' }}>Blog</span>}
-            onClick={() => navigate('/me/blog')}
+            onClick={() => navigate('/blog')}
           />
         </Tabs>
       </AppBar>
