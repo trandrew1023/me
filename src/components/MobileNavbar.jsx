@@ -29,11 +29,11 @@ export default function MobileNavbar() {
   });
 
   const paths = [
-    '/',
-    '/resume',
-    '/projects',
-    '/portfolio',
-    '/blog',
+    '/me',
+    '/me/resume',
+    '/me/projects',
+    '/me/portfolio',
+    '/me/blog',
   ];
 
   return (
@@ -48,33 +48,33 @@ export default function MobileNavbar() {
         }}
       >
         <BottomNavigationAction
-          value="/"
+          value={'/' || '/me'}
           label="Home"
-          onClick={() => navigate('/')}
+          onClick={() => navigate('/me')}
           icon={<HomeIcon />}
         />
         <BottomNavigationAction
-          value="/resume"
+          value="/me/resume"
           label="Resume"
-          onClick={() => navigate('/resume')}
+          onClick={() => navigate('/me/resume')}
           icon={<ContactPageIcon />}
         />
         <BottomNavigationAction
-          value="/projects"
+          value="/me/projects"
           label="Projects"
-          onClick={() => navigate('/projects')}
+          onClick={() => navigate('/me/projects')}
           icon={<AppsIcon />}
         />
         <BottomNavigationAction
-          value="/portfolio"
+          value="/me/portfolio"
           label="Portfolio"
-          onClick={() => navigate('/portfolio')}
+          onClick={() => navigate('/me/portfolio')}
           icon={<FolderSharedIcon />}
         />
         <BottomNavigationAction
-          value="/blog"
+          value="/me/blog"
           label="Blog"
-          onClick={() => navigate('/blog')}
+          onClick={() => navigate('/me/blog')}
           icon={<BookIcon />}
         />
       </BottomNavigation>

@@ -13,7 +13,6 @@ import imageSelfie from '../static/images/selfie.png';
 import imageShoppingList from '../static/images/shopping-list.png';
 
 export default function Projects() {
-  AOS.init();
   const projects = [
     {
       img: image281,
@@ -82,6 +81,7 @@ export default function Projects() {
   useEffect(() => {
     document.title = 'Projects - Trandrew';
     window.scrollTo(0, 0);
+    AOS.init();
   });
 
   return (

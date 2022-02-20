@@ -52,11 +52,11 @@ export default function Footer() {
         alignItems="center"
         justifyContent="center"
       >
-        <Button onClick={() => navigate('/')} sx={{ color: 'black' }}>Home</Button>
-        <Button onClick={() => navigate('/resume')} sx={{ color: 'black' }}>Resume</Button>
-        <Button onClick={() => navigate('/projects')} sx={{ color: 'black' }}>Projects</Button>
-        <Button onClick={() => navigate('/portfolio')} sx={{ color: 'black' }}>Portfolio</Button>
-        <Button onClick={() => navigate('/blog')} sx={{ color: 'black' }}>Blog</Button>
+        <Button onClick={() => navigate('/me')} sx={{ color: 'black' }}>Home</Button>
+        <Button onClick={() => navigate('/me/resume')} sx={{ color: 'black' }}>Resume</Button>
+        <Button onClick={() => navigate('/me/projects')} sx={{ color: 'black' }}>Projects</Button>
+        <Button onClick={() => navigate('/me/portfolio')} sx={{ color: 'black' }}>Portfolio</Button>
+        <Button onClick={() => navigate('/me/blog')} sx={{ color: 'black' }}>Blog</Button>
       </Grid>
     </Box>
   );

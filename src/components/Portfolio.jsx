@@ -8,7 +8,6 @@ import imageDance from '../static/images/fun.png';
 import imageYoutTube from '../static/images/youtube.png';
 
 export default function Portfolio() {
-  AOS.init();
   const portfolioCards = [
     {
       img: imageCamera,
@@ -37,6 +36,7 @@ export default function Portfolio() {
   useEffect(() => {
     document.title = 'Portfolio - Trandrew';
     window.scrollTo(0, 0);
+    AOS.init();
   });
 
   return (
