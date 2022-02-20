@@ -1,5 +1,5 @@
 import { React } from 'react';
-import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import { HashRouter, Route, Routes } from 'react-router-dom';
 import Header from './components/Header';
 import Blog from './components/Blog';
 import Home from './components/Home';
@@ -11,7 +11,7 @@ import MobileNavbar from './components/MobileNavbar';
 
 function App() {
   return (
-    <BrowserRouter>
+    <HashRouter>
       <>
         {window.innerWidth >= 540 && <Header />}
         <Routes>
@@ -24,7 +24,7 @@ function App() {
         </Routes>
         {window.innerWidth < 540 ? <MobileNavbar /> : <Footer />}
       </>
-    </BrowserRouter>
+    </HashRouter>
   );
 }
 

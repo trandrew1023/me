@@ -29,18 +29,17 @@ export default function MobileNavbar() {
   });
 
   const paths = [
-    '/me',
-    '/me/resume',
-    '/me/projects',
-    '/me/portfolio',
-    '/me/blog',
+    '#/me/resume',
+    '#/me/projects',
+    '#/me/portfolio',
+    '#/me/blog',
   ];
 
   return (
     <ThemeProvider theme={theme}>
       <BottomNavigation
         showLabels
-        value={paths.indexOf(window.location.pathname) === -1 ? '/' : window.location.pathname}
+        value={paths.indexOf(window.location.hash) === -1 ? '/' : window.location.hash}
         sx={{
           width: '100%',
           position: 'fixed',
@@ -48,31 +47,31 @@ export default function MobileNavbar() {
         }}
       >
         <BottomNavigationAction
-          value={'/' || '/me'}
+          value={'/' || '#/' || '#/me'}
           label="Home"
           onClick={() => navigate('/me')}
           icon={<HomeIcon />}
         />
         <BottomNavigationAction
-          value="/me/resume"
+          value="#/me/resume"
           label="Resume"
           onClick={() => navigate('/me/resume')}
           icon={<ContactPageIcon />}
         />
         <BottomNavigationAction
-          value="/me/projects"
+          value="#/me/projects"
           label="Projects"
           onClick={() => navigate('/me/projects')}
           icon={<AppsIcon />}
         />
         <BottomNavigationAction
-          value="/me/portfolio"
+          value="#/me/portfolio"
           label="Portfolio"
           onClick={() => navigate('/me/portfolio')}
           icon={<FolderSharedIcon />}
         />
         <BottomNavigationAction
-          value="/me/blog"
+          value="#/me/blog"
           label="Blog"
           onClick={() => navigate('/me/blog')}
           icon={<BookIcon />}
