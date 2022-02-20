@@ -43,8 +43,10 @@ export default function Portfolio() {
     <Box
       sx={{
         mt: 5,
-        mb: 5,
+        display: 'flex',
         flexDirection: 'column',
+        alignItems: 'center',
+        minHeight: '75vh',
       }}
     >
       <Typography
@@ -59,6 +61,7 @@ export default function Portfolio() {
       <Grid
         container
         alignItems="stretch"
+        width="80%"
         sx={{ mt: 3 }}
       >
         {
@@ -72,7 +75,6 @@ export default function Portfolio() {
               xs={12}
               sm={6}
               md={4}
-              sx={{ mb: 3 }}
             >
               <PortfolioCard portfolioCardDetails={portfolioCard} />
             </Grid>

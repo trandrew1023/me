@@ -88,8 +88,10 @@ export default function Projects() {
     <Box
       sx={{
         mt: 5,
-        mb: 5,
+        display: 'flex',
         flexDirection: 'column',
+        alignItems: 'center',
+        minHeight: '75vh',
       }}
     >
       <Typography
@@ -118,7 +120,7 @@ export default function Projects() {
               xs={12}
               sm={6}
               md={4}
-              lg={3}
+              xl={3}
               sx={{ mb: 3 }}
             >
               <ProjectCard projectDetails={project} />
