@@ -277,7 +277,6 @@ export default function Resume() {
     >
       <TimelineOppositeContent color="text.secondary">
         {timelineItemDetails.date}
-        {index}
       </TimelineOppositeContent>
       <TimelineSeparator>
         <TimelineDot />
