@@ -88,10 +88,11 @@ export default function Projects() {
     <Box
       sx={{
         mt: 5,
+        mb: 5,
         display: 'flex',
         flexDirection: 'column',
         alignItems: 'center',
-        minHeight: '75vh',
+        minHeight: '72vh',
       }}
     >
       <Typography
