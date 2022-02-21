@@ -19,7 +19,7 @@ export default function Blog() {
   });
 
   return (
-    <Box data-aos="fade-down">
+    <Box data-aos="fade-up">
       <Grid
         container
         display="flex"

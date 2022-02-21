@@ -2,6 +2,7 @@ import {
   Fragment,
   React,
   useEffect,
+  useRef,
   useState,
 } from 'react';
 import {
@@ -9,8 +10,10 @@ import {
   Box,
   Grid,
   Grow,
+  IconButton,
   Typography,
 } from '@mui/material';
+import ArrowCircleDownIcon from '@mui/icons-material/ArrowCircleDown';
 import Timeline from '@mui/lab/Timeline';
 import TimelineItem from '@mui/lab/TimelineItem';
 import TimelineSeparator from '@mui/lab/TimelineSeparator';
@@ -24,6 +27,18 @@ import imageChicken from '../static/images/chick.png';
 
 export default function Resume() {
   const [time, setTime] = useState(new Date());
+  const [scrollButtonVisible, setScrollButtonVisible] = useState(true);
+  const footerRef = useRef();
+
+  const toggleScrollButtonVisible = () => {
+    const element = document.documentElement;
+    if (element.scrollHeight - element.scrollTop <= element.clientHeight + 20) {
+      setScrollButtonVisible(false);
+    } else {
+      setScrollButtonVisible(true);
+    }
+  };
+
   const renderList = (items) => (
     <ul>
       {items.map((item) => (
@@ -33,13 +48,19 @@ export default function Resume() {
   );
 
   const renderExperience = (experience) => (
-    <>
-      <Typography sx={{ display: 'inline', fontWeight: 'bold' }}>{experience.name}</Typography>
-      {experience.location && <Typography sx={{ display: 'inline' }}> - </Typography>}
-      <Typography sx={{ display: 'inline' }}>{experience.location}</Typography>
-      <Typography>{experience.position}</Typography>
-      <Typography>{experience.date}</Typography>
-    </>
+    <Grid container sx={{ mt: 1 }}>
+      <Grid item xs={12}>
+        <Typography sx={{ display: 'inline', fontWeight: 'bold' }}>{experience.name}</Typography>
+        {experience.location && <Typography sx={{ display: 'inline' }}> - </Typography>}
+        <Typography sx={{ display: 'inline' }}>{experience.location}</Typography>
+      </Grid>
+      <Grid item xs={12}>
+        <Typography>{experience.position}</Typography>
+      </Grid>
+      <Grid item xs={12}>
+        <Typography>{experience.date}</Typography>
+      </Grid>
+    </Grid>
   );
 
   const experience = () => (
@@ -75,38 +96,44 @@ export default function Resume() {
   );
 
   const skills = () => (
-    <>
-      <Typography sx={{ fontWeight: 'bold' }}>Languages I Have Experience With</Typography>
-      {renderList([
-        'Java',
-        'JavaScript',
-        'SQL',
-      ])}
-      <Typography sx={{ fontWeight: 'bold' }}>Other Languages I&apos;ve Used</Typography>
-      {renderList([
-        'C',
-        'C#',
-        'HTML/CSS',
-        'Python',
-      ])}
-      <Typography sx={{ fontWeight: 'bold' }}>Tools/Technologies I&apos;ve Used</Typography>
-      {renderList([
-        'Android',
-        'Django',
-        'Docker',
-        'Git',
-        'Hadoop',
-        'JBehave',
-        'Jira',
-        'JUnit',
-        'MapReduce',
-        'Maven',
-        'Oracle Database',
-        'Postgres',
-        'React',
-        'Spring Boot',
-      ])}
-    </>
+    <Grid container sx={{ mt: 1 }}>
+      <Grid item xs={12}>
+        <Typography sx={{ fontWeight: 'bold' }}>Languages I Have Experience With:</Typography>
+        {renderList([
+          'Java',
+          'JavaScript',
+          'SQL',
+        ])}
+      </Grid>
+      <Grid item xs={12}>
+        <Typography sx={{ fontWeight: 'bold' }}>Other Languages I&apos;ve Used:</Typography>
+        {renderList([
+          'C',
+          'C#',
+          'HTML/CSS',
+          'Python',
+        ])}
+      </Grid>
+      <Grid item xs={12}>
+        <Typography sx={{ fontWeight: 'bold' }}>Tools/Technologies I&apos;ve Used:</Typography>
+        {renderList([
+          'Android',
+          'Django',
+          'Docker',
+          'Git',
+          'Hadoop',
+          'JBehave',
+          'Jira',
+          'JUnit',
+          'MapReduce',
+          'Maven',
+          'Oracle Database',
+          'Postgres',
+          'React',
+          'Spring Boot',
+        ])}
+      </Grid>
+    </Grid>
   );
 
   const education = () => (
@@ -211,20 +238,9 @@ export default function Resume() {
                 textAlign: 'center',
               }}
             >
-              Education
+              Experience
             </Typography>
-            {education()}
-            <Typography
-              variant="h5"
-              sx={{
-                textDecorationLine: 'underline',
-                fontWeight: 'bold',
-                textAlign: 'center',
-              }}
-            >
-              Honors/Awards
-            </Typography>
-            {honorsAndAwards()}
+            {experience()}
           </div>
         </Grid>
       </Grow>
@@ -242,9 +258,20 @@ export default function Resume() {
                 textAlign: 'center',
               }}
             >
-              Experience
+              Education
             </Typography>
-            {experience()}
+            {education()}
+            <Typography
+              variant="h5"
+              sx={{
+                textDecorationLine: 'underline',
+                fontWeight: 'bold',
+                textAlign: 'center',
+              }}
+            >
+              Honors/Awards
+            </Typography>
+            {honorsAndAwards()}
           </div>
         </Grid>
       </Grow>
@@ -298,12 +325,14 @@ export default function Resume() {
   useEffect(() => {
     document.title = 'Resume - Trandrew';
     window.scrollTo(0, 0);
+    window.addEventListener('scroll', toggleScrollButtonVisible);
     AOS.init();
     const timer = setInterval(() => {
       setTime(new Date());
     }, 1000);
     return () => {
       clearInterval(timer);
+      window.removeEventListener('scroll', toggleScrollButtonVisible);
     };
   }, []);
 
@@ -317,6 +346,25 @@ export default function Resume() {
         alignItems: 'center',
       }}
     >
+      {scrollButtonVisible && (
+        <Grow
+          in
+          timeout={800}
+        >
+          <IconButton
+            onClick={() => (
+              footerRef.current.scrollIntoView({ behavior: 'smooth' })
+            )}
+            sx={{
+              position: 'fixed',
+              bottom: 50,
+              right: 5,
+            }}
+          >
+            <ArrowCircleDownIcon fontSize="large" />
+          </IconButton>
+        </Grow>
+      )}
       <Grow
         in
         timeout={800}
@@ -355,7 +403,7 @@ export default function Resume() {
           </TimelineContent>
         </TimelineItem>
       </Timeline>
-      <Avatar data-aos="fade-up" src={imageChicken} sx={{ mb: 6 }} />
+      <Avatar ref={footerRef} data-aos="fade-up" src={imageChicken} sx={{ mb: 6 }} />
     </Box>
   );
 }

@@ -9,6 +9,7 @@ import {
   Typography,
 } from '@mui/material';
 import GitHubIcon from '@mui/icons-material/GitHub';
+import PublicIcon from '@mui/icons-material/Public';
 import PropTypes from 'prop-types';
 
 export default function ProjectCard({ projectDetails }) {
@@ -39,10 +40,15 @@ export default function ProjectCard({ projectDetails }) {
           </Typography>
         </CardContent>
       </CardActionArea>
-      <CardActions sx={{ mt: 'auto' }}>
+      <CardActions sx={{ display: 'flex', ml: 'auto', mt: 'auto' }}>
         <IconButton href={projectDetails.url}>
           <GitHubIcon />
         </IconButton>
+        {projectDetails.site && (
+          <IconButton href={projectDetails.site}>
+            <PublicIcon />
+          </IconButton>
+        )}
       </CardActions>
     </Card>
   );
@@ -55,5 +61,6 @@ ProjectCard.propTypes = {
     name: PropTypes.string,
     description: PropTypes.string,
     url: PropTypes.string,
+    site: PropTypes.string,
   }).isRequired,
 };

@@ -13,7 +13,7 @@ export default function Portfolio() {
       img: imageCamera,
       alt: 'Camera',
       name: 'Photography',
-      description: 'Hopefully you don\'t just an image by its cover.',
+      description: 'Hopefully you don\'t judge an image by its cover.',
       url: 'https://andrewtran32.pixieset.com/andrewsgallery/',
     },
     {

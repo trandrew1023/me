@@ -26,8 +26,11 @@ export default function Projects() {
       img: imageChicken,
       alt: 'Chicken',
       name: 'aCOUPlefarms',
-      description: 'Web application to manage poutry farms.',
+      description: `Web application to manage poutry farms.
+      The app is currently deployed with free Heroku dynos so it may
+      take a bit to load.`,
       url: 'https://github.com/trandrew1023/acouplefarms-app',
+      site: 'https://acouplefarms.herokuapp.com/',
     },
     {
       img: imageClock,

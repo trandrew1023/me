@@ -15,7 +15,7 @@ import { useNavigate } from 'react-router-dom';
 export default function Footer() {
   const navigate = useNavigate();
   return (
-    <Box>
+    <Box sx={{ mb: 3 }}>
       <Grid
         container
         alignItems="center"
