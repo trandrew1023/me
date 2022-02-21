@@ -23,9 +23,17 @@ export default function Header() {
   const paths = [
     '#/resume',
     '#/projects',
+    '#/project',
     '#/portfolio',
     '#/blog',
   ];
+
+  const getValue = () => {
+    const path = window.location.hash;
+    if (paths.indexOf(path) === -1) return '/';
+    if (path === '#/project') return '#/projects';
+    return path;
+  };
 
   return (
     <ThemeProvider theme={theme}>
@@ -34,7 +42,7 @@ export default function Header() {
         sx={{ alignItems: 'center' }}
       >
         <Tabs
-          value={paths.indexOf(window.location.hash) === -1 ? '/' : window.location.hash}
+          value={getValue()}
           indicatorColor="primary"
           TabIndicatorProps={{
             sx: {
@@ -53,7 +61,7 @@ export default function Header() {
             onClick={() => navigate('/resume')}
           />
           <Tab
-            value="#/projects"
+            value={'#/projects' || '#/project'}
             label={<span style={{ color: 'black' }}>Projects</span>}
             onClick={() => navigate('/projects')}
           />

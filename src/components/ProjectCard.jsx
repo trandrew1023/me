@@ -12,7 +12,7 @@ import GitHubIcon from '@mui/icons-material/GitHub';
 import PublicIcon from '@mui/icons-material/Public';
 import PropTypes from 'prop-types';
 
-export default function ProjectCard({ projectDetails }) {
+export default function ProjectCard({ projectDetails, openProject }) {
   return (
     <Card
       sx={{
@@ -23,7 +23,7 @@ export default function ProjectCard({ projectDetails }) {
         justifyItems: 'center',
       }}
     >
-      <CardActionArea href={projectDetails.url}>
+      <CardActionArea onClick={() => openProject(projectDetails.key)}>
         <CardMedia
           component="img"
           height="300"
@@ -56,6 +56,7 @@ export default function ProjectCard({ projectDetails }) {
 
 ProjectCard.propTypes = {
   projectDetails: PropTypes.shape({
+    key: PropTypes.number,
     img: PropTypes.string,
     alt: PropTypes.string,
     name: PropTypes.string,
@@ -63,4 +64,5 @@ ProjectCard.propTypes = {
     url: PropTypes.string,
     site: PropTypes.string,
   }).isRequired,
+  openProject: PropTypes.func.isRequired,
 };
