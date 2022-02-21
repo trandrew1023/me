@@ -32,7 +32,7 @@ export default function Resume() {
 
   const toggleScrollButtonVisible = () => {
     const element = document.documentElement;
-    if (element.scrollHeight - element.scrollTop <= element.clientHeight + 20) {
+    if (element.scrollHeight - element.scrollTop <= element.clientHeight + 69) {
       setScrollButtonVisible(false);
     } else {
       setScrollButtonVisible(true);
@@ -155,6 +155,11 @@ export default function Resume() {
         date: 'Fall 2016 - Spring 2020',
       })}
       {renderExperience({
+        name: 'The President’s Volunteer Service Award',
+        position: 'Corporation for National & Community Service',
+        date: 'May 2016',
+      })}
+      {renderExperience({
         name: 'Deans List',
         position: 'Iowa State University',
         date: 'Spring/Fall 2017, Spring/Fall 2018 Spring/Fall 2019, Spring 2020',
@@ -173,11 +178,6 @@ export default function Resume() {
         name: '1st Project (voted by peers and TAs)',
         position: 'SE 319 - Construction of User Interfaces',
         date: 'Fall 2018',
-      })}
-      {renderExperience({
-        name: 'The President’s Volunteer Service Award',
-        position: 'Corporation for National & Community Service',
-        date: 'May 2016',
       })}
     </>
   );
@@ -357,7 +357,7 @@ export default function Resume() {
             )}
             sx={{
               position: 'fixed',
-              bottom: 50,
+              bottom: 60,
               right: 5,
             }}
           >

@@ -74,8 +74,8 @@ export default function Portfolio() {
               item
               justifyContent="center"
               xs={12}
-              sm={6}
-              md={4}
+              md={6}
+              lg={4}
               sx={{ mb: 3 }}
             >
               <PortfolioCard portfolioCardDetails={portfolioCard} />
