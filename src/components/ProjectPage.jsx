@@ -1,4 +1,4 @@
-import { React } from 'react';
+import { React, useEffect } from 'react';
 import {
   Box,
   Grid,
@@ -13,6 +13,11 @@ import { useLocation, useNavigate } from 'react-router-dom';
 export default function ProjectPage() {
   const { state } = useLocation();
   const navigate = useNavigate();
+
+  useEffect(() => {
+    document.title = `${state.title} - Trandrew`;
+    window.scrollTo(0, 0);
+  });
 
   return (
     <Box
@@ -29,7 +34,7 @@ export default function ProjectPage() {
           <img
             src={state.img}
             alt={state.alt}
-            width={window.innerWidth >= 540 ? '50%' : window.innerWidth / 1.1}
+            width={window.innerWidth >= 540 ? '30%' : window.innerWidth / 1.1}
           />
           <Grid
             container
