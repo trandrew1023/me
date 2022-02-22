@@ -320,12 +320,25 @@ export default function Projects() {
   });
 
   const openProject = (projectKey) => {
+    sessionStorage.setItem('y-position', window.scrollY);
     navigate('/project', { state: projectPageDescriptions.get(projectKey) });
   };
 
   useEffect(() => {
     document.title = 'Projects - Trandrew';
-    window.scrollTo(0, 0);
+    const yPosition = sessionStorage.getItem('y-position');
+    const backToProject = sessionStorage.getItem('backToProject');
+    if (yPosition) {
+      sessionStorage.removeItem('y-position');
+      sessionStorage.removeItem('backToProject');
+      if (backToProject) {
+        window.scrollTo(0, yPosition);
+      } else {
+        window.scrollTo(0, 0);
+      }
+    } else {
+      window.scrollTo(0, 0);
+    }
     AOS.init();
   });
 
@@ -369,7 +382,10 @@ export default function Projects() {
               xl={3}
               sx={{ mb: 3 }}
             >
-              <ProjectCard projectDetails={project} openProject={openProject} />
+              <ProjectCard
+                projectDetails={project}
+                openProject={openProject}
+              />
             </Grid>
           ))
         }

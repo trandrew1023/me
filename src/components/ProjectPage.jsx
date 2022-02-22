@@ -80,7 +80,7 @@ export default function ProjectPage() {
               )}
             </Grid>
             <Grid item xs={12}>
-              <IconButton onClick={() => navigate('/projects')}>
+              <IconButton onClick={() => { navigate('/projects'); sessionStorage.setItem('backToProject', true); }}>
                 <ArrowBackIcon fontSize="large" />
               </IconButton>
             </Grid>
