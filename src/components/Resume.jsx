@@ -344,6 +344,7 @@ export default function Resume() {
         alignItems: 'center',
         bgcolor: 'background.default',
         color: 'text.primary',
+        zIndex: 0,
       }}
     >
       {scrollButtonVisible && (
@@ -372,7 +373,7 @@ export default function Resume() {
         <Typography
           variant="h4"
           sx={{
-            mt: 5,
+            mt: window.innerWidth >= 540 ? 10 : 5,
             fontWeight: 'bold',
             textAlign: 'center',
           }}

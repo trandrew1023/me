@@ -45,15 +45,17 @@ export default function Portfolio() {
         display: 'flex',
         flexDirection: 'column',
         alignItems: 'center',
-        minHeight: '100vh',
+        height: 'auto',
+        minHeight: '90.0vh',
         bgcolor: 'background.default',
         color: 'text.primary',
+        zIndex: 0,
       }}
     >
       <Typography
         variant="h4"
         sx={{
-          mt: 5,
+          mt: window.innerWidth >= 540 ? 10 : 5,
           fontWeight: 'bold',
           textAlign: 'center',
         }}

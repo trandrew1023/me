@@ -22,8 +22,9 @@ export default function Header() {
 
   return (
     <AppBar
-      position="static"
+      position="fixed"
       sx={{
+        zIndex: 1,
         alignItems: 'center',
         bgcolor: 'background.default',
         color: 'text.primary',

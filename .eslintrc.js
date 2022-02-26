@@ -21,5 +21,6 @@ module.exports = {
     "indent": "off",
     "react/jsx-indent": "off",
     "react/jsx-indent-props": "off",
+    "linebreak-style": 0,
   },
 };

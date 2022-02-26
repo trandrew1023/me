@@ -352,12 +352,13 @@ export default function Projects() {
         minHeight: '72vh',
         bgcolor: 'background.default',
         color: 'text.primary',
+        zIndex: 0,
       }}
     >
       <Typography
         variant="h4"
         sx={{
-          mt: 5,
+          mt: window.innerWidth >= 540 ? 10 : 5,
           fontWeight: 'bold',
           textAlign: 'center',
         }}

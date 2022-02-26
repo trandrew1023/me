@@ -23,7 +23,7 @@ export default function Blog() {
       sx={{
         bgcolor: 'background.default',
         color: 'text.primary',
-        height: '100vh',
+        minHeight: window.innerWidth >= 540 ? '90.0vh' : '100vh',
       }}
     >
       <Grid
@@ -34,7 +34,7 @@ export default function Blog() {
         alignItems="center"
         justifyContent="center"
         sx={{
-          minHeight: '80vh',
+          minHeight: '90vh',
         }}
       >
         <Grid item xs={12}>

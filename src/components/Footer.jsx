@@ -19,6 +19,8 @@ export default function Footer() {
       sx={{
         bgcolor: 'background.default',
         color: 'text.primary',
+        height: 'auto',
+        minHeight: '10vh',
       }}
     >
       <Grid

@@ -27,7 +27,8 @@ export default function Home({ darkMode, setDarkMode }) {
       sx={{
         bgcolor: 'background.default',
         color: 'text.primary',
-        height: '100vh',
+        height: 'auto',
+        minHeight: window.innerWidth >= 540 ? '90.0vh' : '100vh',
       }}
     >
       <Grid
@@ -38,7 +39,7 @@ export default function Home({ darkMode, setDarkMode }) {
         alignItems="center"
         justifyContent="center"
         sx={{
-          minHeight: '80vh',
+          minHeight: '90vh',
         }}
       >
         <Grid item xs={12}>
@@ -58,8 +59,9 @@ export default function Home({ darkMode, setDarkMode }) {
         onClick={() => setDarkMode(darkMode === 'dark' ? 'light' : 'dark')}
         sx={{
           position: 'fixed',
-          top: '0',
-          right: '0',
+          top: window.innerWidth >= 540 ? 3 : 0,
+          right: 0,
+          zIndex: 2,
         }}
       >
         {darkMode === 'light' ? <Brightness4Icon /> : <Brightness4OutlinedIcon />}
