@@ -19,8 +19,15 @@ export default function Blog() {
   });
 
   return (
-    <Box data-aos="fade-up">
+    <Box
+      sx={{
+        bgcolor: 'background.default',
+        color: 'text.primary',
+        height: '100vh',
+      }}
+    >
       <Grid
+        data-aos="fade-up"
         container
         display="flex"
         direction="column"

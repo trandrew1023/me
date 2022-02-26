@@ -15,7 +15,12 @@ import { useNavigate } from 'react-router-dom';
 export default function Footer() {
   const navigate = useNavigate();
   return (
-    <Box sx={{ mb: 3 }}>
+    <Box
+      sx={{
+        bgcolor: 'background.default',
+        color: 'text.primary',
+      }}
+    >
       <Grid
         container
         alignItems="center"
@@ -47,11 +52,11 @@ export default function Footer() {
         alignItems="center"
         justifyContent="center"
       >
-        <Button onClick={() => navigate('/')} sx={{ color: 'black' }}>Home</Button>
-        <Button onClick={() => navigate('/resume')} sx={{ color: 'black' }}>Resume</Button>
-        <Button onClick={() => navigate('/projects')} sx={{ color: 'black' }}>Projects</Button>
-        <Button onClick={() => navigate('/portfolio')} sx={{ color: 'black' }}>Portfolio</Button>
-        <Button onClick={() => navigate('/blog')} sx={{ color: 'black' }}>Blog</Button>
+        <Button onClick={() => navigate('/')}>Home</Button>
+        <Button onClick={() => navigate('/resume')}>Resume</Button>
+        <Button onClick={() => navigate('/projects')}>Projects</Button>
+        <Button onClick={() => navigate('/portfolio')}>Portfolio</Button>
+        <Button onClick={() => navigate('/blog')}>Blog</Button>
       </Grid>
     </Box>
   );

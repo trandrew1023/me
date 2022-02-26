@@ -339,11 +339,11 @@ export default function Resume() {
   return (
     <Box
       sx={{
-        mt: 5,
-        mb: 5,
         display: 'flex',
         flexDirection: 'column',
         alignItems: 'center',
+        bgcolor: 'background.default',
+        color: 'text.primary',
       }}
     >
       {scrollButtonVisible && (
@@ -372,6 +372,7 @@ export default function Resume() {
         <Typography
           variant="h4"
           sx={{
+            mt: 5,
             fontWeight: 'bold',
             textAlign: 'center',
           }}
@@ -403,7 +404,12 @@ export default function Resume() {
           </TimelineContent>
         </TimelineItem>
       </Timeline>
-      <Avatar ref={footerRef} data-aos="fade-up" src={imageChicken} sx={{ mb: 6 }} />
+      <Avatar
+        ref={footerRef}
+        data-aos="fade-up"
+        src={imageChicken}
+        sx={{ mb: 11 }}
+      />
     </Box>
   );
 }

@@ -42,17 +42,18 @@ export default function Portfolio() {
   return (
     <Box
       sx={{
-        mt: 5,
-        mb: 5,
         display: 'flex',
         flexDirection: 'column',
         alignItems: 'center',
-        minHeight: '72vh',
+        minHeight: '100vh',
+        bgcolor: 'background.default',
+        color: 'text.primary',
       }}
     >
       <Typography
         variant="h4"
         sx={{
+          mt: 5,
           fontWeight: 'bold',
           textAlign: 'center',
         }}
@@ -76,7 +77,7 @@ export default function Portfolio() {
               xs={12}
               md={6}
               lg={4}
-              sx={{ mb: 3 }}
+              sx={{ mb: 8 }}
             >
               <PortfolioCard portfolioCardDetails={portfolioCard} />
             </Grid>

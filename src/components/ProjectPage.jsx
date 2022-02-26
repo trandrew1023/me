@@ -25,8 +25,8 @@ export default function ProjectPage() {
         display: 'flex',
         flexDirection: 'column',
         alignItems: 'center',
-        mt: 3,
-        mb: 4,
+        bgcolor: 'background.default',
+        color: 'text.primary',
       }}
     >
       {state && (
@@ -34,6 +34,7 @@ export default function ProjectPage() {
           <img
             src={state.img}
             alt={state.alt}
+            style={{ marginTop: '30px' }}
             width={window.innerWidth >= 540 ? '30%' : window.innerWidth / 1.1}
           />
           <Grid
@@ -41,7 +42,7 @@ export default function ProjectPage() {
             width={window.innerWidth >= 540 ? '60%' : '90%'}
             sx={{
               mt: 3,
-              mb: 3,
+              mb: 7,
             }}
           >
             <Grid item xs={12}>

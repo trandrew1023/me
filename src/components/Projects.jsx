@@ -1,6 +1,6 @@
 import { React, useEffect } from 'react';
 import { Box, Grid, Typography } from '@mui/material';
-import { useNavigate } from 'react-router-dom';
+import { useLocation, useNavigate } from 'react-router-dom';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import ProjectCard from './ProjectCard';
@@ -21,6 +21,7 @@ import imageShoppingList from '../static/images/shopping-list.png';
 
 export default function Projects() {
   const navigate = useNavigate();
+  const { state } = useLocation();
   const projects = [
     {
       key: 0,
@@ -246,7 +247,7 @@ export default function Projects() {
     descriptionBody: [
       {
         key: 0,
-        description: 'A class project created with Isaac Sanga and Lucas Jedlicka.',
+        description: 'A class project created with Isaac Zahau and Lucas Jedlicka.',
       },
       {
         key: 1,
@@ -331,7 +332,7 @@ export default function Projects() {
     if (yPosition) {
       sessionStorage.removeItem('y-position');
       sessionStorage.removeItem('backToProject');
-      if (backToProject) {
+      if (backToProject || !state?.reset) {
         window.scrollTo(0, yPosition);
       } else {
         window.scrollTo(0, 0);
@@ -345,17 +346,18 @@ export default function Projects() {
   return (
     <Box
       sx={{
-        mt: 5,
-        mb: 5,
         display: 'flex',
         flexDirection: 'column',
         alignItems: 'center',
         minHeight: '72vh',
+        bgcolor: 'background.default',
+        color: 'text.primary',
       }}
     >
       <Typography
         variant="h4"
         sx={{
+          mt: 5,
           fontWeight: 'bold',
           textAlign: 'center',
         }}
@@ -380,7 +382,7 @@ export default function Projects() {
               sm={6}
               md={4}
               xl={3}
-              sx={{ mb: 3 }}
+              sx={{ mb: 8 }}
             >
               <ProjectCard
                 projectDetails={project}

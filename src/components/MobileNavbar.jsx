@@ -13,26 +13,11 @@ import HomeIcon from '@mui/icons-material/Home';
 import HomeOutlinedIcon from '@mui/icons-material/HomeOutlined';
 import ViewCozyIcon from '@mui/icons-material/ViewCozy';
 import ViewCozyOutlinedIcon from '@mui/icons-material/ViewCozyOutlined';
-import { createTheme, ThemeProvider } from '@mui/material/styles';
-import { grey } from '@mui/material/colors';
 import { useNavigate } from 'react-router-dom';
 
 export default function MobileNavbar() {
   const [selectedIcon, setSelectedIcon] = useState('home');
   const navigate = useNavigate();
-
-  const theme = createTheme({
-    palette: {
-      primary: {
-        main: grey[900],
-        contrastText: grey[900],
-      },
-      secondary: {
-        main: grey[900],
-        contrastText: grey[100],
-      },
-    },
-  });
 
   const paths = [
     '#/resume',
@@ -52,47 +37,46 @@ export default function MobileNavbar() {
   });
 
   return (
-    <ThemeProvider theme={theme}>
-      <BottomNavigation
-        showLabels
-        value={paths.indexOf(window.location.hash) === -1 ? '/' : window.location.hash}
-        sx={{
-          width: '100%',
-          position: 'fixed',
-          bottom: 0,
-        }}
-      >
-        <BottomNavigationAction
-          value={'/' || '#/'}
-          label="Home"
-          onClick={() => { navigate('/'); setSelectedIcon('home'); }}
-          icon={selectedIcon === 'home' ? <HomeIcon /> : <HomeOutlinedIcon />}
-        />
-        <BottomNavigationAction
-          value="#/resume"
-          label="Resume"
-          onClick={() => { navigate('/resume'); setSelectedIcon('resume'); }}
-          icon={selectedIcon === 'resume' ? <ContactPageIcon /> : <ContactPageOutlinedIcon />}
-        />
-        <BottomNavigationAction
-          value="#/projects"
-          label="Projects"
-          onClick={() => { navigate('/projects'); setSelectedIcon('projects'); }}
-          icon={selectedIcon === 'projects' ? <ViewCozyIcon /> : <ViewCozyOutlinedIcon />}
-        />
-        <BottomNavigationAction
-          value="#/portfolio"
-          label="Portfolio"
-          onClick={() => { navigate('/portfolio'); setSelectedIcon('portfolio'); }}
-          icon={selectedIcon === 'portfolio' ? <FolderSharedIcon /> : <FolderSharedOutlinedIcon />}
-        />
-        <BottomNavigationAction
-          value="#/blog"
-          label="Blog"
-          onClick={() => { navigate('/blog'); setSelectedIcon('blog'); }}
-          icon={selectedIcon === 'blog' ? <BookIcon /> : <BookOutlinedIcon />}
-        />
-      </BottomNavigation>
-    </ThemeProvider>
+    <BottomNavigation
+      showLabels
+      value={paths.indexOf(window.location.hash) === -1 ? '/' : window.location.hash}
+      sx={{
+        width: '100%',
+        position: 'fixed',
+        bottom: 0,
+        bgcolor: 'background.default',
+      }}
+    >
+      <BottomNavigationAction
+        value={'/' || '#/'}
+        label="Home"
+        onClick={() => { navigate('/'); setSelectedIcon('home'); }}
+        icon={selectedIcon === 'home' ? <HomeIcon /> : <HomeOutlinedIcon />}
+      />
+      <BottomNavigationAction
+        value="#/resume"
+        label="Resume"
+        onClick={() => { navigate('/resume'); setSelectedIcon('resume'); }}
+        icon={selectedIcon === 'resume' ? <ContactPageIcon /> : <ContactPageOutlinedIcon />}
+      />
+      <BottomNavigationAction
+        value="#/projects"
+        label="Projects"
+        onClick={() => { navigate('/projects'); setSelectedIcon('projects'); }}
+        icon={selectedIcon === 'projects' ? <ViewCozyIcon /> : <ViewCozyOutlinedIcon />}
+      />
+      <BottomNavigationAction
+        value="#/portfolio"
+        label="Portfolio"
+        onClick={() => { navigate('/portfolio'); setSelectedIcon('portfolio'); }}
+        icon={selectedIcon === 'portfolio' ? <FolderSharedIcon /> : <FolderSharedOutlinedIcon />}
+      />
+      <BottomNavigationAction
+        value="#/blog"
+        label="Blog"
+        onClick={() => { navigate('/blog'); setSelectedIcon('blog'); }}
+        icon={selectedIcon === 'blog' ? <BookIcon /> : <BookOutlinedIcon />}
+      />
+    </BottomNavigation>
   );
 }
