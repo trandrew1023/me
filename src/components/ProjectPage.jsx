@@ -25,6 +25,8 @@ export default function ProjectPage() {
         display: 'flex',
         flexDirection: 'column',
         alignItems: 'center',
+        height: 'auto',
+        minHeight: window.innerWidth >= 540 ? '90.0vh' : '100vh',
         bgcolor: 'background.default',
         color: 'text.primary',
       }}
@@ -34,7 +36,7 @@ export default function ProjectPage() {
           <img
             src={state.img}
             alt={state.alt}
-            style={{ marginTop: '30px' }}
+            style={{ marginTop: window.innerWidth >= 540 ? '60px' : '30px' }}
             width={window.innerWidth >= 540 ? '30%' : window.innerWidth / 1.1}
           />
           <Grid
