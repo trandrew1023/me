@@ -15,8 +15,8 @@ export default function Header() {
 
   const getValue = () => {
     const path = window.location.hash;
+    if (path.includes('#/project')) return '#/projects';
     if (paths.indexOf(path) === -1) return '/';
-    if (path === '#/project') return '#/projects';
     return path;
   };
 

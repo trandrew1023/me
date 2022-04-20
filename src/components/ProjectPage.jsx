@@ -18,10 +18,14 @@ export default function ProjectPage() {
 
   useEffect(() => {
     const projectPageInfo = projectPageDetails[params.name];
+    if (!projectPageInfo) {
+      navigate('/projects');
+      window.location.reload();
+    }
     setState(projectPageInfo);
     document.title = `${projectPageInfo.title} - Trandrew`;
     window.scrollTo(0, 0);
-  });
+  }, []);
 
   return (
     <Box

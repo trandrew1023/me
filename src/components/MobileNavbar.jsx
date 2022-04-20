@@ -17,6 +17,7 @@ import { useNavigate } from 'react-router-dom';
 
 export default function MobileNavbar() {
   const [selectedIcon, setSelectedIcon] = useState('home');
+  const [value, setValue] = useState('/');
   const navigate = useNavigate();
 
   const paths = [
@@ -29,17 +30,24 @@ export default function MobileNavbar() {
 
   useEffect(() => {
     const path = window.location.hash;
-    if (paths.indexOf(path) === -1) setSelectedIcon('home');
-    else if (path === paths[0]) setSelectedIcon('resume');
+    setValue(path);
+    if (path.includes('#/project')) {
+      setSelectedIcon('projects');
+      setValue('#/projects');
+    } else if (paths.indexOf(path) === -1) {
+      setSelectedIcon('home');
+      setValue('/');
+    } else if (path === paths[0]) setSelectedIcon('resume');
     else if (path === paths[1] || path === paths[2]) setSelectedIcon('projects');
     else if (path === paths[3]) setSelectedIcon('portfolio');
     else if (path === paths[4]) setSelectedIcon('blog');
+    else setSelectedIcon('home');
   });
 
   return (
     <BottomNavigation
       showLabels
-      value={paths.indexOf(window.location.hash) === -1 ? '/' : window.location.hash}
+      value={value}
       sx={{
         width: '100%',
         position: 'fixed',
