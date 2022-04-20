@@ -1,9 +1,11 @@
 import { React } from 'react';
 import {
   Box,
+  Button,
   Grid,
   Modal,
 } from '@mui/material';
+import CancelIcon from '@mui/icons-material/Cancel';
 import PropTypes from 'prop-types';
 
 export default function ResumeModal({ resumeOpen, setResumeModalOpen }) {
@@ -27,13 +29,19 @@ export default function ResumeModal({ resumeOpen, setResumeModalOpen }) {
     >
       <Box component="form" sx={style}>
         <Grid container>
+          <Button
+            onClick={() => setResumeModalOpen(false)}
+            sx={{ ml: 'auto' }}
+          >
+            <CancelIcon />
+          </Button>
           <embed
             data-aos="fade-up"
             src="https://drive.google.com/file/d/1XBBhJlMTlGwpZM0gTzeCzOdjZr9MGu4X/preview?usp=sharing"
             style={{
               marginBottom: 75,
               width: '100%',
-              height: '80vh',
+              height: '75vh',
             }}
           />
         </Grid>
