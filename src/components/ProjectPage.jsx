@@ -1,4 +1,4 @@
-import { React, useEffect } from 'react';
+import { React, useEffect, useState } from 'react';
 import {
   Box,
   Grid,
@@ -8,14 +8,18 @@ import {
 import ArrowBackIcon from '@mui/icons-material/ArrowBack';
 import GitHubIcon from '@mui/icons-material/GitHub';
 import PublicIcon from '@mui/icons-material/Public';
-import { useLocation, useNavigate } from 'react-router-dom';
+import { useNavigate, useParams } from 'react-router-dom';
+import projectPageDetails from '../static/data/projectPageDescriptions.json';
 
 export default function ProjectPage() {
-  const { state } = useLocation();
+  const [state, setState] = useState(null);
+  const params = useParams();
   const navigate = useNavigate();
 
   useEffect(() => {
-    document.title = `${state.title} - Trandrew`;
+    const projectPageInfo = projectPageDetails[params.name];
+    setState(projectPageInfo);
+    document.title = `${projectPageInfo.title} - Trandrew`;
     window.scrollTo(0, 0);
   });
 

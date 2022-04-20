@@ -1,0 +1,67 @@
+[
+  {
+    "alt": "281++",
+    "description": "Web application allowing users to design, simulate, and debug digital logic schematics.",
+    "img": "../static/images/main-page.png",
+    "key": 0,
+    "name": "281++",
+    "url": "https://github.com/trandrew1023/281-plus-plus"
+  },
+  {
+    "alt": "Chicken",
+    "description": "Web application to manage poutry farms. The app is currently deployed with free Heroku dynos so it may take a bit to load.",
+    "img": "../static/images/hen.png",
+    "key": 1,
+    "name": "aCOUPlefarms",
+    "site": "https://acouplefarms.herokuapp.com/",
+    "url": "https://github.com/trandrew1023/acouplefarms-app"
+  },
+  {
+    "alt": "Clock",
+    "description": "Google Chrome extension that helps you calculate when you need to clock out for work.",
+    "img": "../static/images/clock.png",
+    "key": 2,
+    "name": "ClockOut Extension",
+    "url": "https://github.com/trandrew1023/clock-out-extension"
+  },
+  {
+    "alt": "Drinker's Choice",
+    "description": "Reddit-like Android application for drinks created as a class project.",
+    "img": "../static/images/drinkers-choice.png",
+    "key": 3,
+    "name": "Drinker's Choice",
+    "url": "https://github.com/trandrew1023/drinkers-choice"
+  },
+  {
+    "alt": "CCTV",
+    "description": "Web application focused on being an affordable home security solution.",
+    "img": "../static/images/cctv.png",
+    "key": 4,
+    "name": "Economic Home Security System",
+    "url": "https://github.com/trandrew1023/economic-home-security-system"
+  },
+  {
+    "alt": "Selfie",
+    "description": "Android application that turns your phone into a security cam.",
+    "img": "../static/images/selfie.png",
+    "key": 5,
+    "name": "Security Cam",
+    "url": "https://github.com/trandrew1023/security-cam"
+  },
+  {
+    "alt": "RaspberryPi",
+    "description": "Hackathon project that encrypts and embeds messages across multiple devices.",
+    "img": "../static/images/raspberry-pi.png",
+    "key": 6,
+    "name": "S.E.C.R.E.T",
+    "url": "https://github.com/trandrew1023/secret-hack-isu-project"
+  },
+  {
+    "alt": "Shopping List",
+    "description": "Simple Android application for creating shopping lists.",
+    "img": "../static/images/shopping-list.png",
+    "key": 7,
+    "name": "Shopping List",
+    "url": "https://github.com/trandrew1023/shopping-list"
+  }
+]

@@ -41,7 +41,7 @@ function App() {
           <Route path="/" element={<Home darkMode={darkMode} setDarkMode={toggleDarkMode} />} />
           <Route path="/resume" element={<Resume />} />
           <Route path="/projects" element={<Projects />} />
-          <Route path="/project" element={<ProjectPage />} />
+          <Route path="/project/:name" element={<ProjectPage />} />
           <Route path="/portfolio" element={<Portfolio reset />} />
           <Route path="/blog" element={<Blog />} />
           <Route path="*" element={<Home darkMode={darkMode} setDarkMode={toggleDarkMode} />} />

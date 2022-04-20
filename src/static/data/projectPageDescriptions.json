@@ -1,0 +1,185 @@
+{
+  "281++": {
+    "alt": "281++",
+    "descriptionBody": [
+      {
+        "description": "A class project created with Michael Lauderback and Justin Worley. Also voted as top project by the class!",
+        "key": 0
+      },
+      {
+        "description": "CprE 281 is Iowa State's Digital Logic class. We use Quartus Prime to design for our FPGA and it could be challenging at times to debug and use. We wanted to make a Notepad++ equivalent to prototype, save, and simulate digital logic schematics.",
+        "key": 1
+      }
+    ],
+    "img": "https://firebasestorage.googleapis.com/v0/b/personal-site-bc899.appspot.com/o/images%2Fdflipflop.gif?alt=media&token=7db77fa8-6527-4860-b40b-d14744ba1812",
+    "techStack": [
+      "Firebase",
+      "Bootstrap",
+      "JQuery",
+      "p5.js"
+    ],
+    "title": "281++",
+    "url": "https://github.com/trandrew1023/281-plus-plus"
+  },
+  "aCOUPlefarms": {
+    "alt": "Chicken",
+    "descriptionBody": [
+      {
+        "description": "aCOUPlefarms is a web application inspired by my parents who own a poultry farm. From the number of birds, how much food/water is left, or just notes to look back onto, my parents currently use pen, paper, or even memory to track vital information.",
+        "key": 0
+      },
+      {
+        "description": "The app allows users to join or create new organizations (like a Farm) and different places (such as a coop) to save and track customizable statistics.",
+        "key": 1
+      },
+      {
+        "description": "This app is still under development but is deployed using Heroku's free dynos so you can check it out if you like (may take a bit to load at first).",
+        "key": 2
+      }
+    ],
+    "img": "https://firebasestorage.googleapis.com/v0/b/personal-site-bc899.appspot.com/o/images%2Fhen.png?alt=media&token=776813ab-7df6-4249-8dc2-8a436fd83d05",
+    "site": "https://acouplefarms.herokuapp.com/",
+    "techStack": [
+      "React",
+      "React Router",
+      "Axios",
+      "Spring Boot",
+      "SQL Database (H2/PostgreSQL)"
+    ],
+    "title": "aCOUPlefarms",
+    "url": "https://github.com/trandrew1023/acouplefarms-app"
+  },
+  "ClockOut Extension": {
+    "alt": "Clockout",
+    "descriptionBody": [
+      {
+        "description": "A personal project that I created during my internship to help me quickly figure out when I clock out for the day.",
+        "key": 0
+      },
+      {
+        "description": "While interning at Cerner, another intern created a website that would calculate when you should clock out. I stole the idea and made a Chrome extension for myself with additions to suit my needs.",
+        "key": 1
+      }
+    ],
+    "img": "https://firebasestorage.googleapis.com/v0/b/personal-site-bc899.appspot.com/o/images%2Fclockout.JPG?alt=media&token=f5842e83-a85c-4e7c-bd87-22580ed4d53d",
+    "techStack": [
+      "JavaScript",
+      "HTML/CSS",
+      "Bootstrap",
+      "Moment.js"
+    ],
+    "title": "ClockOut Extension",
+    "url": "https://github.com/trandrew1023/clock-out-extension"
+  },
+  "Drinker's Choice": {
+    "alt": "Drinker's Choice App",
+    "descriptionBody": [
+      {
+        "description": "A class project created with Camden Thomas and Ethan Young.",
+        "key": 0
+      },
+      {
+        "description": "As my first big project from scratch, I was nervous and excited to start. The app is very similar to Reddit. A user can post a drink with a description, up or downvote, comment, and share. Since drinks may also included alcohol, we built in a ride request as well where one can request a ride with location, messaging, and redirection to a payment app is included.",
+        "key": 1
+      }
+    ],
+    "img": "https://firebasestorage.googleapis.com/v0/b/personal-site-bc899.appspot.com/o/images%2Fdrinkers-choice.jpg?alt=media&token=e63e62be-f0bd-4e25-9b01-2aad0ffdc2e0",
+    "techStack": [
+      "Android",
+      "Java WebSocket",
+      "Spring",
+      "SQL"
+    ],
+    "title": "Drinker's Choice",
+    "url": "https://github.com/trandrew1023/drinkers-choice"
+  },
+  "Economic Home Security System": {
+    "alt": "Economic Home Security System Post",
+    "descriptionBody": [
+      {
+        "description": "Senior Design Final Project created with Uma Abu, Lucas Jedlicka, Kamini Saldanha, Merin Mundt, and Sohum Sawant.",
+        "key": 0
+      },
+      {
+        "description": "Today's consumerism leads many good and bad things. A few observations our team has made: many smartphones sit unused, crimes and burglaries are still common, and the market for security systems is growing. Our goal was to create a self suficient security system that recycles old hardware.",
+        "key": 1
+      }
+    ],
+    "img": "https://firebasestorage.googleapis.com/v0/b/personal-site-bc899.appspot.com/o/images%2FPoster-sdmay20-42.jpg?alt=media&token=25e2d8bf-f27a-485c-9a00-41f597e2a48a",
+    "site": "http://sdmay20-42.sd.ece.iastate.edu/docs/Poster-sdmay20-42.pdf",
+    "techStack": [
+      "Django",
+      "Djoser/SimpleJWT",
+      "Docker",
+      "Medooze Media Server",
+      "SQL",
+      "NGINX",
+      "React",
+      "JavaScript",
+      "TensorFlow"
+    ],
+    "title": "Economic Home Security System",
+    "url": "https://github.com/trandrew1023/economic-home-security-system"
+  },
+  "Security Cam": {
+    "alt": "Security Cam",
+    "descriptionBody": [
+      {
+        "description": "A class project created with Isaac Zahau and Lucas Jedlicka.",
+        "key": 0
+      },
+      {
+        "description": "Inspired by Economic Home Security System, this was created as an Android prototype for a proof of concept. The senior design project is a web application which has browser limitations, affecting older devices. A native Android application would have reasonable performance and more compatibility. This was created before the final project so it does not use the same services for streaming and user authentication.",
+        "key": 1
+      }
+    ],
+    "img": "https://firebasestorage.googleapis.com/v0/b/personal-site-bc899.appspot.com/o/images%2FScreenshot_20191211-135650_SecurityCam.jpg?alt=media&token=ca980b4c-cde6-4bb9-bd56-ca4469b2bf7c",
+    "techStack": [
+      "Android",
+      "Firebase",
+      "Libstreaming"
+    ],
+    "title": "Security Cam",
+    "url": "https://github.com/trandrew1023/security-cam"
+  },
+  "S.E.C.R.E.T": {
+    "alt": "S.E.C.R.E.T",
+    "descriptionBody": [
+      {
+        "description": "A hackathon project created with Jack Potter, Camden Thomas, and Ethan Young. Awarded First Place Hardware and Most Ethical Hack!",
+        "key": 0
+      },
+      {
+        "description": "The S.E.C.R.E.T (Steganography/Encryption for Circumventing REalized Tyranny)&nbsp;device consists primarily of a Raspberry Pi and Arduino Uno. The Raspberry Pi contains our python scripts that encrypt and embed the secrets into images, while the Arduino provides a hardware interface for the to interact with. The S.E.C.R.E.T is capable of completely headless operation, reqr or keyboard, only three onboard buttons and single status LED. The Arduino also interfaces with the microphone we use for atmospheric noise collection in the process of random number generation. Half of our team focused on assembling the hardware and developing the interface to connect the low-luiring no monitoevel code to the physical devices, while the other half focused on implementing the encryption and steganography systems.",
+        "key": 1
+      }
+    ],
+    "img": "https://firebasestorage.googleapis.com/v0/b/personal-site-bc899.appspot.com/o/images%2F20181021_064059.jpg?alt=media&token=e4a540fd-15ac-4984-8b3d-2e9381d57c7a",
+    "site": "https://devpost.com/software/secret-prv9bq",
+    "techStack": [
+      "Python",
+      "Raspberry Pi/Arduino Uno"
+    ],
+    "title": "S.E.C.R.E.T",
+    "url": "https://github.com/trandrew1023/secret-hack-isu-project"
+  },
+  "Shopping List": {
+    "alt": "Shopping List",
+    "descriptionBody": [
+      {
+        "description": "A class mini-project to create a shopping list app.",
+        "key": 0
+      },
+      {
+        "description": "This is a simple shopping list Android app created to learn how to build an Android app from the ground up. There was also a focus on using the MVC pattern and specific tools and libraries.",
+        "key": 1
+      }
+    ],
+    "img": "https://firebasestorage.googleapis.com/v0/b/personal-site-bc899.appspot.com/o/images%2Fshopping-list.png?alt=media&token=4cfb5b1c-d777-4186-ab30-37a0bbe84bc0",
+    "techStack": [
+      "Android"
+    ],
+    "title": "Shopping List",
+    "url": "https://github.com/trandrew1023/security-cam"
+  }
+}

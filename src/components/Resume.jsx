@@ -8,6 +8,7 @@ import {
 import {
   Avatar,
   Box,
+  Button,
   Grid,
   Grow,
   IconButton,
@@ -24,10 +25,12 @@ import TimelineOppositeContent from '@mui/lab/TimelineOppositeContent';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import imageChicken from '../static/images/chick.png';
+import ResumeModal from './ResumeModal';
 
 export default function Resume() {
   const [time, setTime] = useState(new Date());
   const [scrollButtonVisible, setScrollButtonVisible] = useState(true);
+  const [resumeOpen, setResumeOpen] = useState(false);
   const footerRef = useRef();
 
   const toggleScrollButtonVisible = () => {
@@ -381,6 +384,20 @@ export default function Resume() {
           Resume
         </Typography>
       </Grow>
+      <Grow
+        in
+        timeout={800}
+      >
+        <Button
+          variant="outlined"
+          onClick={() => setResumeOpen(true)}
+          sx={{
+            mt: 2,
+          }}
+        >
+          View PDF
+        </Button>
+      </Grow>
       {resumeBody()}
       <Timeline
         position="alternate"
@@ -409,8 +426,9 @@ export default function Resume() {
         ref={footerRef}
         data-aos="fade-up"
         src={imageChicken}
-        sx={{ mb: 11 }}
+        sx={{ mb: 13 }}
       />
+      <ResumeModal resumeOpen={resumeOpen} setResumeModalOpen={setResumeOpen} />
     </Box>
   );
 }
