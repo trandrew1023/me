@@ -37,7 +37,7 @@ export default function ResumeModal({ resumeOpen, setResumeModalOpen }) {
           </Button>
           <embed
             data-aos="fade-up"
-            src="https://drive.google.com/file/d/1XBBhJlMTlGwpZM0gTzeCzOdjZr9MGu4X/preview?usp=sharing"
+            src="https://drive.google.com/file/d/1A5-10kLmaaFI__4x6W5EHekbdsjgcuEU/preview?usp=sharing"
             style={{
               marginBottom: 75,
               width: '100%',

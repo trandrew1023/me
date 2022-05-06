@@ -74,13 +74,22 @@ export default function Resume() {
         position: 'Software Engineer',
         date: 'July 2020 - Present',
       })}
+      {renderList(
+        [
+          'Support/developed clinical inventory management (supply chain) applications.',
+          'Developed Java (8) services to find and manage items used by different teams and for a new mobile application.',
+          'Debugged/deployed fixes within legacy code to improve client experience.',
+          'Learned and implemented code that follows strict standards such as barcodes, NDCs, and EDI.',
+          'Contributed to team/API documentation.',
+        ],
+      )}
       {renderExperience({
         name: 'Cerner Corporation',
         location: 'Kansas City, Missouri',
         position: 'Software Intern',
         date: 'May 2019 - August 2019',
       })}
-      {renderList(['Implemented and tested REST web services using Java'])}
+      {renderList(['Implemented and unit tested part of a REST web service for message routing using Java.'])}
       {renderExperience({
         name: 'Iowa State University',
         location: 'Ames, Iowa',
@@ -101,20 +110,21 @@ export default function Resume() {
   const skills = () => (
     <Grid container sx={{ mt: 1 }}>
       <Grid item xs={12}>
-        <Typography sx={{ fontWeight: 'bold' }}>Languages I Have Experience With:</Typography>
+        <Typography sx={{ fontWeight: 'bold' }}>Languages I Have Most Experience With:</Typography>
         {renderList([
           'Java',
-          'JavaScript',
-          'SQL',
         ])}
       </Grid>
       <Grid item xs={12}>
         <Typography sx={{ fontWeight: 'bold' }}>Other Languages I&apos;ve Used:</Typography>
         {renderList([
+          'SQL',
+          'JavaScript',
           'C',
           'C#',
           'HTML/CSS',
           'Python',
+          'CCL (Cerner Command Language)',
         ])}
       </Grid>
       <Grid item xs={12}>
@@ -123,17 +133,20 @@ export default function Resume() {
           'Android',
           'Django',
           'Docker',
+          'Firebase',
           'Git',
-          'Hadoop',
+          'JAX-RS',
           'JBehave',
           'Jira',
           'JUnit',
-          'MapReduce',
           'Maven',
+          'MySQL',
           'Oracle Database',
           'Postgres',
           'React',
-          'Spring Boot',
+          'Serenity',
+          'Spring',
+          'Swagger',
         ])}
       </Grid>
     </Grid>
