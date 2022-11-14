@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/me/static/css/main.31c7f2fb.css",
-    "main.js": "/me/static/js/main.6625c740.js",
+    "main.js": "/me/static/js/main.525f2d5f.js",
     "static/js/787.ee95881d.chunk.js": "/me/static/js/787.ee95881d.chunk.js",
     "static/media/20181021_064059.jpg": "/me/static/media/20181021_064059.454c05de3d2d6a53785d.jpg",
     "static/media/Poster-sdmay20-42.jpg": "/me/static/media/Poster-sdmay20-42.ba1212198f2562012def.jpg",
@@ -9,8 +9,8 @@
     "static/media/main-page.png": "/me/static/media/main-page.46699aca85301d236d82.png",
     "static/media/drinkers-choice.jpg": "/me/static/media/drinkers-choice.fc4f972ebd0fe2a64664.jpg",
     "static/media/dflipflop.gif": "/me/static/media/dflipflop.cd7f5e3a1fade8c997b1.gif",
+    "static/media/raspberry-pi.png": "/me/static/media/raspberry-pi.60ffcf84fb5a581b99af.png",
     "static/media/hen.png": "/me/static/media/hen.bfe27ab14a297d16c1e2.png",
-    "static/media/raspberry-pi.png": "/me/static/media/raspberry-pi.5edfdfef0a4e59e58391.png",
     "static/media/chick.png": "/me/static/media/chick.7da3ca42b24a5f770d5e.png",
     "static/media/shopping-list.png": "/me/static/media/shopping-list.1945d2f1ac325c8038aa.png",
     "static/media/camera.png": "/me/static/media/camera.7118d2938cc6eef69c0c.png",
@@ -22,11 +22,11 @@
     "static/media/clock.png": "/me/static/media/clock.086cb6463eac50d77602.png",
     "index.html": "/me/index.html",
     "main.31c7f2fb.css.map": "/me/static/css/main.31c7f2fb.css.map",
-    "main.6625c740.js.map": "/me/static/js/main.6625c740.js.map",
+    "main.525f2d5f.js.map": "/me/static/js/main.525f2d5f.js.map",
     "787.ee95881d.chunk.js.map": "/me/static/js/787.ee95881d.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.31c7f2fb.css",
-    "static/js/main.6625c740.js"
+    "static/js/main.525f2d5f.js"
   ]
 }
