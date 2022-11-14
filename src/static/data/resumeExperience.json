@@ -1,0 +1,36 @@
+[
+  {
+    "date": "November 2018 - May 2020",
+    "list": [
+      "ETG is the Computer, Electric, and Software Engineering\\'s resource for classes, research, and labs.",
+      "Provided equipment and guidance for classes.",
+      "Managed and rebuilt department computers and equipment.",
+      "Managed and recruited for lab monitoring team."
+    ],
+    "location": "Ames, Iowa",
+    "name": "Iowa State University",
+    "position": "Electronics and Technology Group (ETG) Assistant"
+  },
+  {
+    "date": "May 2019 - August 2019",
+    "list": [
+      "Implemented and unit tested part of a REST web service for message routing using Java."
+    ],
+    "location": "Kansas City, Missouri",
+    "name": "Cerner Corporation",
+    "position": "Software Intern"
+  },
+  {
+    "date": "July 2020 - Present",
+    "list": [
+      "Support/developed clinical inventory management (supply chain) applications.",
+      "Developed Java (8) services to find and manage items used by different teams and for a new mobile application.",
+      "Debugged/deployed fixes within legacy code to improve client experience.",
+      "Learned and implemented code that follows strict standards such as barcodes, NDCs, and EDI.",
+      "Contributed to team/API documentation."
+    ],
+    "location": "Kansas City, Missouri",
+    "name": "Cerner Corporation",
+    "position": "Software Engineer"
+  }
+]

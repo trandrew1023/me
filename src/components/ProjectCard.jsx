@@ -8,13 +8,27 @@ import {
   IconButton,
   Typography,
 } from '@mui/material';
+import { styled } from '@mui/material/styles';
 import GitHubIcon from '@mui/icons-material/GitHub';
 import PublicIcon from '@mui/icons-material/Public';
 import PropTypes from 'prop-types';
 
+const StyledCard = styled(Card)`
+  ${({ theme }) => `
+  transition: ${theme.transitions.create(['background-color', 'transform'], {
+  duration: 250,
+})};
+  &:hover {
+    background: linear-gradient(#e66465, #9198e5);
+    transform: scale(1.05);
+    border-style: mixed;
+  }
+  `}
+`;
+
 export default function ProjectCard({ projectDetails, openProject, projectImage }) {
   return (
-    <Card
+    <StyledCard
       sx={{
         width: 300,
         height: '100%',
@@ -50,7 +64,7 @@ export default function ProjectCard({ projectDetails, openProject, projectImage 
           </IconButton>
         )}
       </CardActions>
-    </Card>
+    </StyledCard>
   );
 }
 
