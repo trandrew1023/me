@@ -63,5 +63,14 @@
     "key": 7,
     "name": "Shopping List",
     "url": "https://github.com/trandrew1023/shopping-list"
+  },
+  {
+    "alt": "EDI Translator",
+    "description": "Web application that generates X12 EDI formatted files using simple interfaces.",
+    "img": "../static/images/pen.png",
+    "key": 8,
+    "name": "EDI Translator",
+    "site": "https://trandrew1023.github.io/edi-translator/",
+    "url": "https://github.com/trandrew1023/edi-translator"
   }
 ]
