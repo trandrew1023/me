@@ -181,5 +181,22 @@
     ],
     "title": "Shopping List",
     "url": "https://github.com/trandrew1023/security-cam"
+  },
+  "EDI Translator": {
+    "alt": "EDI Translator",
+    "descriptionBody": [
+      {
+        "description": "Web application that generates X12 EDI formatted files using simple interfaces.",
+        "key": 0
+      }
+    ],
+    "img": "https://firebasestorage.googleapis.com/v0/b/personal-site-bc899.appspot.com/o/images%2Fpen.png?alt=media&token=5b1de083-8c78-4e50-8452-90ab655e743f",
+    "techStack": [
+      "React",
+      "MUI"
+    ],
+    "title": "EDI Translator",
+    "site": "https://trandrew1023.github.io/edi-translator/",
+    "url": "https://github.com/trandrew1023/edi-translator"
   }
 }

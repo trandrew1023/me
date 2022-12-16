@@ -13,6 +13,7 @@ import imageClockout from '../static/images/clockout.JPG';
 import imageDrinkersChoice from '../static/images/drinkers-choice.png';
 import imageDrinkersChoiceApp from '../static/images/drinkers-choice.jpg';
 import imageEHSS from '../static/images/Poster-sdmay20-42.jpg';
+import imagePen from '../static/images/pen.png';
 import imageRaspberryPi from '../static/images/raspberry-pi.png';
 import imageSecret from '../static/images/20181021_064059.jpg';
 import imageSecurityCam from '../static/images/Screenshot_20191211-135650_SecurityCam.jpg';
@@ -38,6 +39,7 @@ export default function Projects() {
     '../static/images/Screenshot_20191211-135650_SecurityCam.jpg': imageSecurityCam,
     '../static/images/selfie.png': imageSelfie,
     '../static/images/shopping-list.png': imageShoppingList,
+    '../static/images/pen.png': imagePen,
     '../static/data/projects.json': projects,
   };
 
