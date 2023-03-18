@@ -1,8 +1,9 @@
-import { React } from 'react';
 import { AppBar, Tab, Tabs } from '@mui/material';
+import PropTypes from 'prop-types';
+import { React } from 'react';
 import { useNavigate } from 'react-router-dom';
 
-export default function Header() {
+export default function Header({ darkModeToggle }) {
   const navigate = useNavigate();
 
   const paths = [
@@ -35,15 +36,11 @@ export default function Header() {
         indicatorColor="primary"
         TabIndicatorProps={{
           sx: {
-            background: 'black',
+            background: 'text.secondary',
           },
         }}
       >
-        <Tab
-          value={'/' || '#/'}
-          label="Home"
-          onClick={() => navigate('/')}
-        />
+        <Tab value={'/' || '#/'} label="Home" onClick={() => navigate('/')} />
         <Tab
           value="#/resume"
           label="Resume"
@@ -59,12 +56,12 @@ export default function Header() {
           label="Portfolio"
           onClick={() => navigate('/portfolio')}
         />
-        <Tab
-          value="#/blog"
-          label="Blog"
-          onClick={() => navigate('/blog')}
-        />
       </Tabs>
+      {darkModeToggle}
     </AppBar>
   );
 }
+
+Header.propTypes = {
+  darkModeToggle: PropTypes.element.isRequired,
+};
