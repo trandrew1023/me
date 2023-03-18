@@ -1,10 +1,3 @@
-import { React, useEffect, useState } from 'react';
-import {
-  BottomNavigation,
-  BottomNavigationAction,
-} from '@mui/material';
-import BookIcon from '@mui/icons-material/Book';
-import BookOutlinedIcon from '@mui/icons-material/BookOutlined';
 import ContactPageIcon from '@mui/icons-material/ContactPage';
 import ContactPageOutlinedIcon from '@mui/icons-material/ContactPageOutlined';
 import FolderSharedIcon from '@mui/icons-material/FolderShared';
@@ -13,6 +6,8 @@ import HomeIcon from '@mui/icons-material/Home';
 import HomeOutlinedIcon from '@mui/icons-material/HomeOutlined';
 import ViewCozyIcon from '@mui/icons-material/ViewCozy';
 import ViewCozyOutlinedIcon from '@mui/icons-material/ViewCozyOutlined';
+import { BottomNavigation, BottomNavigationAction } from '@mui/material';
+import { React, useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 
 export default function MobileNavbar() {
@@ -38,11 +33,11 @@ export default function MobileNavbar() {
       setSelectedIcon('home');
       setValue('/');
     } else if (path === paths[0]) setSelectedIcon('resume');
-    else if (path === paths[1] || path === paths[2]) setSelectedIcon('projects');
-    else if (path === paths[3]) setSelectedIcon('portfolio');
-    else if (path === paths[4]) setSelectedIcon('blog');
+    else if (path === paths[1] || path === paths[2]) {
+      setSelectedIcon('projects');
+    } else if (path === paths[3]) setSelectedIcon('portfolio');
     else setSelectedIcon('home');
-  });
+  }, []);
 
   return (
     <BottomNavigation
@@ -58,32 +53,56 @@ export default function MobileNavbar() {
       <BottomNavigationAction
         value={'/' || '#/'}
         label="Home"
-        onClick={() => { navigate('/'); setSelectedIcon('home'); }}
+        onClick={() => {
+          navigate('/');
+          setSelectedIcon('home');
+        }}
         icon={selectedIcon === 'home' ? <HomeIcon /> : <HomeOutlinedIcon />}
       />
       <BottomNavigationAction
         value="#/resume"
         label="Resume"
-        onClick={() => { navigate('/resume'); setSelectedIcon('resume'); }}
-        icon={selectedIcon === 'resume' ? <ContactPageIcon /> : <ContactPageOutlinedIcon />}
+        onClick={() => {
+          navigate('/resume');
+          setSelectedIcon('resume');
+        }}
+        icon={
+          selectedIcon === 'resume' ? (
+            <ContactPageIcon />
+          ) : (
+            <ContactPageOutlinedIcon />
+          )
+        }
       />
       <BottomNavigationAction
         value="#/projects"
         label="Projects"
-        onClick={() => { navigate('/projects'); setSelectedIcon('projects'); }}
-        icon={selectedIcon === 'projects' ? <ViewCozyIcon /> : <ViewCozyOutlinedIcon />}
+        onClick={() => {
+          navigate('/projects');
+          setSelectedIcon('projects');
+        }}
+        icon={
+          selectedIcon === 'projects' ? (
+            <ViewCozyIcon />
+          ) : (
+            <ViewCozyOutlinedIcon />
+          )
+        }
       />
       <BottomNavigationAction
         value="#/portfolio"
         label="Portfolio"
-        onClick={() => { navigate('/portfolio'); setSelectedIcon('portfolio'); }}
-        icon={selectedIcon === 'portfolio' ? <FolderSharedIcon /> : <FolderSharedOutlinedIcon />}
-      />
-      <BottomNavigationAction
-        value="#/blog"
-        label="Blog"
-        onClick={() => { navigate('/blog'); setSelectedIcon('blog'); }}
-        icon={selectedIcon === 'blog' ? <BookIcon /> : <BookOutlinedIcon />}
+        onClick={() => {
+          navigate('/portfolio');
+          setSelectedIcon('portfolio');
+        }}
+        icon={
+          selectedIcon === 'portfolio' ? (
+            <FolderSharedIcon />
+          ) : (
+            <FolderSharedOutlinedIcon />
+          )
+        }
       />
     </BottomNavigation>
   );

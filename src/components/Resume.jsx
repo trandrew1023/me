@@ -1,10 +1,11 @@
-import {
-  Fragment,
-  React,
-  useEffect,
-  useRef,
-  useState,
-} from 'react';
+import ArrowCircleDownIcon from '@mui/icons-material/ArrowCircleDown';
+import Timeline from '@mui/lab/Timeline';
+import TimelineConnector from '@mui/lab/TimelineConnector';
+import TimelineContent from '@mui/lab/TimelineContent';
+import TimelineDot from '@mui/lab/TimelineDot';
+import TimelineItem from '@mui/lab/TimelineItem';
+import TimelineOppositeContent from '@mui/lab/TimelineOppositeContent';
+import TimelineSeparator from '@mui/lab/TimelineSeparator';
 import {
   Avatar,
   Box,
@@ -14,23 +15,16 @@ import {
   IconButton,
   Typography,
 } from '@mui/material';
-import ArrowCircleDownIcon from '@mui/icons-material/ArrowCircleDown';
-import Timeline from '@mui/lab/Timeline';
-import TimelineItem from '@mui/lab/TimelineItem';
-import TimelineSeparator from '@mui/lab/TimelineSeparator';
-import TimelineConnector from '@mui/lab/TimelineConnector';
-import TimelineContent from '@mui/lab/TimelineContent';
-import TimelineDot from '@mui/lab/TimelineDot';
-import TimelineOppositeContent from '@mui/lab/TimelineOppositeContent';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
-import imageChicken from '../static/images/chick.png';
-import ResumeModal from './ResumeModal';
+import { Fragment, React, useEffect, useRef, useState } from 'react';
 import resumeAwards from '../static/data/resumeAwards.json';
 import resumeEducation from '../static/data/resumeEducation.json';
 import resumeExperienceList from '../static/data/resumeExperience.json';
 import resumeSkills from '../static/data/resumeSkills.json';
 import resumeTimeline from '../static/data/resumeTimeline.json';
+import imageChicken from '../static/images/chick.png';
+import ResumeModal from './ResumeModal';
 
 export default function Resume() {
   const [time, setTime] = useState(new Date());
@@ -51,7 +45,9 @@ export default function Resume() {
   const renderList = (items) => (
     <ul>
       {items.map((item) => (
-        <li key={item}><Typography>{item}</Typography></li>
+        <li key={item}>
+          <Typography>{item}</Typography>
+        </li>
       ))}
     </ul>
   );
@@ -59,9 +55,15 @@ export default function Resume() {
   const renderExperience = (experience) => (
     <Grid container key={experience.name} sx={{ mt: 1 }}>
       <Grid item xs={12}>
-        <Typography sx={{ display: 'inline', fontWeight: 'bold' }}>{experience.name}</Typography>
-        {experience.location && <Typography sx={{ display: 'inline' }}> - </Typography>}
-        <Typography sx={{ display: 'inline' }}>{experience.location}</Typography>
+        <Typography sx={{ display: 'inline', fontWeight: 'bold' }}>
+          {experience.name}
+        </Typography>
+        {experience.location && (
+          <Typography sx={{ display: 'inline' }}> - </Typography>
+        )}
+        <Typography sx={{ display: 'inline' }}>
+          {experience.location}
+        </Typography>
       </Grid>
       <Grid item xs={12}>
         <Typography>{experience.position}</Typography>
@@ -75,9 +77,15 @@ export default function Resume() {
   const renderExperienceWithList = (experience) => (
     <Grid container key={experience.date} sx={{ mt: 1 }}>
       <Grid item xs={12}>
-        <Typography sx={{ display: 'inline', fontWeight: 'bold' }}>{experience.name}</Typography>
-        {experience.location && <Typography sx={{ display: 'inline' }}> - </Typography>}
-        <Typography sx={{ display: 'inline' }}>{experience.location}</Typography>
+        <Typography sx={{ display: 'inline', fontWeight: 'bold' }}>
+          {experience.name}
+        </Typography>
+        {experience.location && (
+          <Typography sx={{ display: 'inline' }}> - </Typography>
+        )}
+        <Typography sx={{ display: 'inline' }}>
+          {experience.location}
+        </Typography>
       </Grid>
       <Grid item xs={12}>
         <Typography>{experience.position}</Typography>
@@ -98,53 +106,33 @@ export default function Resume() {
 
   const experience = () => (
     <>
-      {
-        resumeExperience.map((workExperience) => (
-          renderExperienceWithList(workExperience)
-        ))
-      }
+      {resumeExperience.map((workExperience) =>
+        renderExperienceWithList(workExperience),
+      )}
     </>
   );
 
   const skills = () => (
     <Grid container sx={{ mt: 1 }}>
-      {resumeSkills && resumeSkills.map((skillList) => (
-        renderSkills(skillList)
-      ))}
+      {resumeSkills && resumeSkills.map((skillList) => renderSkills(skillList))}
     </Grid>
   );
 
   const education = () => (
     <>
-      {
-        resumeEducation.map((educationEntry) => (
-          renderExperience(educationEntry)
-        ))
-      }
+      {resumeEducation.map((educationEntry) =>
+        renderExperience(educationEntry),
+      )}
     </>
   );
 
   const honorsAndAwards = () => (
-    <>
-      {
-        resumeAwards.map((award) => (
-          renderExperience(award)
-        ))
-      }
-    </>
+    <>{resumeAwards.map((award) => renderExperience(award))}</>
   );
 
   const resumeBody = () => (
-    <Grid
-      container
-      width="80%"
-      spacing={2}
-      sx={{ mt: 1, mr: 2 }}
-    >
-      <Grow
-        in
-        timeout={800}
-      >
+    <Grid container width="80%" spacing={2} sx={{ mt: 1, mr: 2 }}>
+      <Grow in timeout={800}>
         <Grid item xs={12} md={4} sx={{ width: '50%' }}>
           <div data-aos="fade-in">
             <Typography
@@ -161,10 +149,7 @@ export default function Resume() {
           </div>
         </Grid>
       </Grow>
-      <Grow
-        in
-        timeout={1600}
-      >
+      <Grow in timeout={1600}>
         <Grid item xs={12} md={4} sx={{ width: '50%' }}>
           <div data-aos="fade-in">
             <Typography
@@ -192,10 +177,7 @@ export default function Resume() {
           </div>
         </Grid>
       </Grow>
-      <Grow
-        in
-        timeout={2400}
-      >
+      <Grow in timeout={2400}>
         <Grid item xs={12} md={4} sx={{ width: '50%' }}>
           <div data-aos="fade-in">
             <Typography
@@ -216,9 +198,7 @@ export default function Resume() {
   );
 
   const getTimeLineItem = (timelineItemDetails, index) => (
-    <TimelineItem
-      data-aos={index % 2 === 0 ? 'fade-left' : 'fade-right'}
-    >
+    <TimelineItem data-aos={index % 2 === 0 ? 'fade-left' : 'fade-right'}>
       <TimelineOppositeContent color="text.secondary">
         {timelineItemDetails.date}
       </TimelineOppositeContent>
@@ -226,9 +206,7 @@ export default function Resume() {
         <TimelineDot />
         <TimelineConnector />
       </TimelineSeparator>
-      <TimelineContent>
-        {timelineItemDetails.content}
-      </TimelineContent>
+      <TimelineContent>{timelineItemDetails.content}</TimelineContent>
     </TimelineItem>
   );
 
@@ -266,17 +244,15 @@ export default function Resume() {
       }}
     >
       {scrollButtonVisible && (
-        <Grow
-          in
-          timeout={800}
-        >
+        <Grow in timeout={800}>
           <IconButton
-            onClick={() => (
+            aria-label="Scroll to bottom of the page"
+            onClick={() =>
               footerRef.current.scrollIntoView({ behavior: 'smooth' })
-            )}
+            }
             sx={{
               position: 'fixed',
-              bottom: 60,
+              bottom: window.innerWidth >= 540 ? 10 : 60,
               right: 5,
             }}
           >
@@ -284,10 +260,7 @@ export default function Resume() {
           </IconButton>
         </Grow>
       )}
-      <Grow
-        in
-        timeout={800}
-      >
+      <Grow in timeout={800}>
         <Typography
           variant="h4"
           sx={{
@@ -299,10 +272,7 @@ export default function Resume() {
           Resume
         </Typography>
       </Grow>
-      <Grow
-        in
-        timeout={800}
-      >
+      <Grow in timeout={800}>
         <Button
           variant="outlined"
           onClick={() => setResumeOpen(true)}
@@ -325,19 +295,22 @@ export default function Resume() {
         ))}
         <TimelineItem data-aos="fade-up">
           <TimelineOppositeContent color="text.secondary">
-            <Typography color="text.secondary">{time.toLocaleString(undefined, options)}</Typography>
-            <Typography color="text.secondary">{time.toLocaleTimeString()}</Typography>
+            <Typography color="text.secondary">
+              {time.toLocaleString(undefined, options)}
+            </Typography>
+            <Typography color="text.secondary">
+              {time.toLocaleTimeString()}
+            </Typography>
           </TimelineOppositeContent>
           <TimelineSeparator>
             <TimelineDot />
             <TimelineConnector />
           </TimelineSeparator>
-          <TimelineContent>
-            Probably working or sleeping
-          </TimelineContent>
+          <TimelineContent>Probably working or sleeping</TimelineContent>
         </TimelineItem>
       </Timeline>
       <Avatar
+        alt=""
         ref={footerRef}
         data-aos="fade-up"
         src={imageChicken}

@@ -1,4 +1,3 @@
-import { React } from 'react';
 import {
   Card,
   CardActionArea,
@@ -7,6 +6,7 @@ import {
   Typography,
 } from '@mui/material';
 import PropTypes from 'prop-types';
+import { React } from 'react';
 
 export default function PortfolioCard({ portfolioCardDetails }) {
   return (

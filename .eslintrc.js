@@ -3,10 +3,7 @@ module.exports = {
     browser: true,
     es2021: true,
   },
-  extends: [
-    'plugin:react/recommended',
-    'airbnb',
-  ],
+  extends: ['plugin:react/recommended', 'airbnb'],
   parserOptions: {
     ecmaFeatures: {
       jsx: true,
@@ -14,13 +11,16 @@ module.exports = {
     ecmaVersion: 13,
     sourceType: 'module',
   },
-  plugins: [
-    'react',
-  ],
+  plugins: ['react'],
   rules: {
-    "indent": "off",
-    "react/jsx-indent": "off",
-    "react/jsx-indent-props": "off",
-    "linebreak-style": 0,
+    indent: 'off',
+    'react/jsx-indent': 'off',
+    'react/jsx-indent-props': 'off',
+    'linebreak-style': 0,
+    'object-curly-newline': 'off',
+    'react/jsx-wrap-multilines': 'off',
+    'implicit-arrow-linebreak': 'off',
+    'function-paren-newline': 'off',
+    'react/jsx-curly-newline': 'off',
   },
 };

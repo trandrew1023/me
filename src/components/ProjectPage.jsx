@@ -1,13 +1,8 @@
-import { React, useEffect, useState } from 'react';
-import {
-  Box,
-  Grid,
-  IconButton,
-  Typography,
-} from '@mui/material';
 import ArrowBackIcon from '@mui/icons-material/ArrowBack';
 import GitHubIcon from '@mui/icons-material/GitHub';
 import PublicIcon from '@mui/icons-material/Public';
+import { Box, Grid, IconButton, Typography } from '@mui/material';
+import { React, useEffect, useState } from 'react';
 import { useNavigate, useParams } from 'react-router-dom';
 import projectPageDetails from '../static/data/projectPageDescriptions.json';
 
@@ -56,11 +51,15 @@ export default function ProjectPage() {
             }}
           >
             <Grid item xs={12}>
-              <Typography variant="h3" sx={{ textAlign: 'center' }}>{state.title}</Typography>
+              <Typography variant="h3" sx={{ textAlign: 'center' }}>
+                {state.title}
+              </Typography>
             </Grid>
             {state.descriptionBody.map((descriptionPart) => (
               <Grid key={descriptionPart.key} item xs={12} sx={{ mb: 2 }}>
-                <Typography variant="body">{descriptionPart.description}</Typography>
+                <Typography variant="body">
+                  {descriptionPart.description}
+                </Typography>
               </Grid>
             ))}
             <Grid item xs={12}>
@@ -91,7 +90,12 @@ export default function ProjectPage() {
               )}
             </Grid>
             <Grid item xs={12}>
-              <IconButton onClick={() => { navigate('/projects'); sessionStorage.setItem('backToProject', true); }}>
+              <IconButton
+                onClick={() => {
+                  navigate(-1);
+                  sessionStorage.setItem('backToProject', true);
+                }}
+              >
                 <ArrowBackIcon fontSize="large" />
               </IconButton>
             </Grid>
