@@ -4,9 +4,6 @@ on:
   pull_request:
     types: [opened, reopened, synchronize]
 
-env:
-  PREVIEW_URL: https://trandrew1023.github.io/me/preview
-
 jobs:
   build:
     name: Build
@@ -24,16 +21,14 @@ jobs:
       - name: 🏗️ Build
         run: npm run build
 
-      - name: 🚀 Deploy Preview
+      - name: 🚀 Deploy Preview to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./build
-          publish_branch: preview/${{ github.event.number }}
-          cname: ${{ env.PREVIEW_URL }}
-          clean: true
+          destination_dir: ${{ github.event.pull_request.number }}
 
-      - name: Post preview comment
+      - name: Post Preview Comment
         uses: actions/github-script@v4
         with:
           github-token: ${{ secrets.GITHUB_TOKEN }}
@@ -41,7 +36,7 @@ jobs:
             const comment = `
               Preview of this branch has been deployed.
 
-              To view the preview, visit ${process.env.PREVIEW_URL}/${github.event.number}
+              To view the preview, visit https://trandrew1023.github.io/me/${github.event.number}
             `;
             if (github.context && github.context.payload.action === 'opened') {
               github.issues.createComment({
@@ -53,30 +48,15 @@ jobs:
             }
 
   cleanup-preview:
-    needs: [build]
-    if: github.event.pull_request.merged == true || github.event.pull_request.closed == true
+    name: Cleanup PR Preview
     runs-on: ubuntu-latest
+    if: github.event_name == 'pull_request' && github.event.action == 'closed'
     steps:
-      - name: ❌ Cleanup Preview
-        uses: peaceiris/actions-gh-pages@v3
+      - name: 🛎️ Checkout
+        uses: actions/checkout@v2
         with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./preview/${{ github.event.pull_request.number }}
-          clean: true
+          ref: ${{ github.event.pull_request.head.sha }}
 
-      - name: 💬 Post closing comment
-        uses: actions/github-script@v4
-        with:
-          github-token: ${{ secrets.GITHUB_TOKEN }}
-          script: |
-            const comment = `
-              Preview of this branch has been deleted.
-
-              The preview URL is no longer accessible.
-            `;
-            github.issues.createComment({
-              issue_number: github.context.payload.pull_request.number,
-              owner: github.context.repo.owner,
-              repo: github.context.repo.repo,
-              body: comment
-            });
+      - name: 🗑️ Delete Preview
+        run: |
+          git push origin --delete gh-pages/${{ github.event.pull_request.number }}
