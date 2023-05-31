@@ -13,7 +13,6 @@
     "img": "../static/images/hen.png",
     "key": 1,
     "name": "aCOUPlefarms",
-    "site": "https://acouplefarms.herokuapp.com/",
     "url": "https://github.com/trandrew1023/acouplefarms-app"
   },
   {
@@ -41,10 +40,19 @@
     "url": "https://github.com/trandrew1023/economic-home-security-system"
   },
   {
+    "alt": "EDI Translator",
+    "description": "Web application that generates X12 EDI formatted files using simple interfaces.",
+    "img": "../static/images/pen.png",
+    "key": 5,
+    "name": "EDI Translator",
+    "site": "https://trandrew1023.github.io/edi-translator/",
+    "url": "https://github.com/trandrew1023/edi-translator"
+  },
+  {
     "alt": "Selfie",
     "description": "Android application that turns your phone into a security cam.",
     "img": "../static/images/selfie.png",
-    "key": 5,
+    "key": 6,
     "name": "Security Cam",
     "url": "https://github.com/trandrew1023/security-cam"
   },
@@ -52,7 +60,7 @@
     "alt": "RaspberryPi",
     "description": "Hackathon project that encrypts and embeds messages across multiple devices.",
     "img": "../static/images/raspberry-pi.png",
-    "key": 6,
+    "key": 7,
     "name": "S.E.C.R.E.T",
     "url": "https://github.com/trandrew1023/secret-hack-isu-project"
   },
@@ -60,17 +68,8 @@
     "alt": "Shopping List",
     "description": "Simple Android application for creating shopping lists.",
     "img": "../static/images/shopping-list.png",
-    "key": 7,
+    "key": 8,
     "name": "Shopping List",
     "url": "https://github.com/trandrew1023/shopping-list"
-  },
-  {
-    "alt": "EDI Translator",
-    "description": "Web application that generates X12 EDI formatted files using simple interfaces.",
-    "img": "../static/images/pen.png",
-    "key": 8,
-    "name": "EDI Translator",
-    "site": "https://trandrew1023.github.io/edi-translator/",
-    "url": "https://github.com/trandrew1023/edi-translator"
   }
 ]

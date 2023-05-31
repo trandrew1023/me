@@ -2,7 +2,7 @@
   {
     "date": "November 2018 - May 2020",
     "list": [
-      "ETG is the Computer, Electric, and Software Engineering\\'s resource for classes, research, and labs.",
+      "ETG is the Computer, Electric, and Software Engineering's resource for classes, research, and labs.",
       "Provided equipment and guidance for classes.",
       "Managed and rebuilt department computers and equipment.",
       "Managed and recruited for lab monitoring team."
@@ -23,14 +23,16 @@
   {
     "date": "July 2020 - Present",
     "list": [
+      "Transitioned from Cerner to Oracle (Oracle Health) through acquisition on October 2022.",
       "Support/developed clinical inventory management (supply chain) applications.",
-      "Developed Java (8) services to find and manage items used by different teams and for a new mobile application.",
+      "Designed and developed Java (8) services to find and manage items used by different teams and for a new mobile application.",
       "Debugged/deployed fixes within legacy code to improve client experience.",
       "Learned and implemented code that follows strict standards such as barcodes, NDCs, and EDI.",
-      "Contributed to team/API documentation."
+      "Contributed to internal team and consumer API documentation.",
+      "Contributed to Cerner's open source React library called Terra to address a11y (accessibility) and UX issues."
     ],
     "location": "Kansas City, Missouri",
-    "name": "Cerner Corporation",
+    "name": "Oracle/Cerner Corporation",
     "position": "Software Engineer"
   }
 ]

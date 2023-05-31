@@ -1,4 +1,5 @@
 import ArrowCircleDownIcon from '@mui/icons-material/ArrowCircleDown';
+import LaunchIcon from '@mui/icons-material/Launch';
 import Timeline from '@mui/lab/Timeline';
 import TimelineConnector from '@mui/lab/TimelineConnector';
 import TimelineContent from '@mui/lab/TimelineContent';
@@ -13,6 +14,7 @@ import {
   Grid,
   Grow,
   IconButton,
+  Link,
   Typography,
 } from '@mui/material';
 import AOS from 'aos';
@@ -55,9 +57,19 @@ export default function Resume() {
   const renderExperience = (experience) => (
     <Grid container key={experience.name} sx={{ mt: 1 }}>
       <Grid item xs={12}>
-        <Typography sx={{ display: 'inline', fontWeight: 'bold' }}>
-          {experience.name}
-        </Typography>
+        {experience.link ? (
+          <Link
+            href={experience.link}
+            sx={{ display: 'inline', fontWeight: 'bold' }}
+          >
+            {experience.name}
+            <LaunchIcon />
+          </Link>
+        ) : (
+          <Typography sx={{ display: 'inline', fontWeight: 'bold' }}>
+            {experience.name}
+          </Typography>
+        )}
         {experience.location && (
           <Typography sx={{ display: 'inline' }}> - </Typography>
         )}
